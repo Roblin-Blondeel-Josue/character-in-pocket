@@ -3,3 +3,4 @@
 
 npm test
  yarn eslint . && yarn prettier --write .
+ yarn eslint . && yarn prettier --write .
