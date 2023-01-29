@@ -1,0 +1,56 @@
+[
+  {
+    "str": "Vous pouvez porter 20 kg et soulever 50 kg",
+    "cha": "On vous écoute à peine, comme n’importe qui...",
+    "app": "Vous êtes une personne banale, qu’on ne remarque pas"
+  },
+  {
+    "str": "Vous pouvez porter 50 kg et soulever 75 kg",
+    "cha": "Quand vous croisez un humain, il a tendance à essayer de vous écouter",
+    "app": "Vous êtes une personne banale, qu’on ne remarque pas"
+  },
+  {
+    "str": "Vous pouvez porter 75 kg et soulever 100 kg",
+    "sta": "Vous avez une annonce « Résiste » à un dégât aggravé hors argent par soir",
+    "cha": "Contre 1 point de rage vous pouvez effrayer un animal domestique ou plus petit",
+    "app": " Peu d’humains vous ressemblent. Vous faites tourner les regards."
+  },
+  {
+    "str": "Vous pouvez porter 100 kg et soulever 200 kg",
+    "sta": "Vous avez une annonce « Résiste » à un dégât aggravé hors argent par soir",
+    "cha": "Lorsque vous parlez, la plupart des humains doivent vous écouter, ou dépenser un point de volonté pour partir",
+    "app": "Toutes les personnes que vous rencontrez pour la première fois sont bien disposées à votre égard."
+  },
+  {
+    "str": "Vous pouvez porter 200 kg et soulever 400 kg",
+    "sta": "Vous avez une annonce « Résiste » à un dégât aggravé hors argent par soir",
+    "cha": "Pour vous couper la parole, ou quitter une conversation avec vous, une créature surnaturelle doit dépenser un point de Rage.",
+    "man": "Vous gagnez une annonce « Vérité » par soir. En parlant 15 minutesavec une personne au cours d’une conversation, vous pouvez à la fin poser une question sous « Vérité », la personne devra y répondre à moins de dépenser un point de Volonté pour résister, cequi sera visible.",
+    "app": " Si les personnes ne vous voient pas pendant un mois, dès qu’elles vous revoient elles semblent à nouveau mieux disposées à votre égard."
+  },
+  {
+    "str": "Vous pouvez porter 400 kg et soulever 800 kg",
+    "sta": "Vous avez deux annonces « Résiste » à un dégât aggravé hors argent par soir",
+    "cha": "Plus aucun personnage ne peut parler tant que le personnage ne l’autorise pas. Un silence se crée qui ne peut être rompu que par une dépense d’un point de Volonté pour chaque phrase. (toute attaque physique de la personne ayant ce niveau de charisme brise cet effet)",
+    "app": "Tous les personnages pouvant être attirés par vous ne peuvent vous quitter des yeux, ni agir contre vous à moins de dépenser un point de Volonté par tour (toute attaque physique ayant ce niveau d’apparence brise l’état de transe)."
+  },
+  {
+    "str": "Vous pouvez porter 800 kg et soulever 1200 kg",
+    "sta": "Vous avez deux annonces « Résiste » à un dégât aggravé hors argent par soir",
+    "cha": "Tous les personnages doivent s’incliner, ne pouvant plus regarderl’individu ayant ce niveau de charisme à moins de dépenser chaque tour des points de Volonté. (toute attaque physique de la personne ayant ce niveau de charisme brise cet effet) ",
+    "app": "Tous les personnages ne peuvent plus vous quitter des yeux, ni agircontre vous, à moins de dépenser un point de Volonté par tour (toute attaque physique de la personne ayant ce niveau d’apparence brise l’état de transe)."
+  },
+  {
+    "str": "Vous pouvez porter 1200 kg et soulever 2000 kg",
+    "sta": "Vous avez deux annonces « Résiste » à un dégât aggravé hors argent par soir",
+    "app": "Vous êtes une personne banale, qu’on ne remarque pas"
+  },
+  {
+    "str": "Vous pouvez porter 2000 kg et soulever 3500 kg",
+    "sta": "Vous avez deux annonces « Résiste » à un dégât aggravé hors argent par soir",
+    "app": "Vous êtes une personne banale, qu’on ne remarque pas"
+  },
+  {
+    "sta": "Vous avez deux annonces « Résiste » à un dégât aggravé hors argent par soir"
+  }
+]
