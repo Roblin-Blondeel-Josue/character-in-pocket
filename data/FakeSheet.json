@@ -10,7 +10,24 @@
     "attitude": "Seducteur",
     "gnose": 2,
     "willpower": 2,
-    "auspice": { "name": "Philodox", "moon": "Demi-Lune Partielle", "bonus": "blabla", "rage": 6 },
+    "auspice": {
+      "name": "Philodox",
+      "moon": "Demi-Lune Partielle",
+      "bonus": "Vous obtenez deux pouvoirs de Lupus et utiliser  un don nécessitant de la Gnose sans en dépenser une fois par session de jeu.",
+      "rage": 6
+    },
+    "auspicePower": [
+      {
+        "name": "Pouvoir 1",
+        "level": 0,
+        "description": "blablabla"
+      },
+      {
+        "name": "Pouvoir 2",
+        "level": 0,
+        "description": "blablabla"
+      }
+    ],
     "attributes": {
       "str": 2,
       "dex": 3,
@@ -25,27 +42,47 @@
     "avantages": [
       {
         "name": "Sang Surnaturel",
+        "level": 0,
+
         "description": "Vous avez dans les veines un sang ancien, autre que Lupin, qui court. Que ce soit des Fées, des Ferae, ou d’autres choses dont vous n’avez même pas connaissance, vous avez une vision plus ouverte du monde, et potentiellement des alliés cachés qui pourraient vous aider."
       },
       {
         "name": "Indomptable",
+        "level": 0,
         "description": "Vous êtes difficile à maîtriser. Les actions surnaturelles de domination, notamment des Vampires, ne nécessitent plus de dépenser de la Volonté mais uniquement de la Rage pour y résister. De plus, vous pouvez ignorer un ordre surnaturel par soir."
       },
       {
+        "name": null,
+        "level": 0,
+        "description": null
+      },
+      {
+        "name": null,
+        "level": 0,
+        "description": null
+      },
+      {
+        "name": null,
+        "level": 0,
+        "description": null
+      },
+      {
         "name": "Borgne",
+        "level": 0,
         "description": "Vous avez un œil en moins, certes cicatrisé, mais qui vous handicape toujours. La vision en 3 dimensions est impossible, et malgré le prestige de la cicatrice vous êtes sacrément handicapé dans toutes les utilisations de Perception. Celle-ci est divisé par 2 dès qu’elle fait intervenir la vue, arrondie à l’inférieur."
       },
       {
         "name": "Ancêtre Dément",
+        "level": 0,
         "description": "Votre famille a été entachée, par le passé, par un ancêtre qui a commis de sacrés saccages dans la Nation ou dans votre Tribu. Peut-être est-il responsable de la chute d’un Sept célèbre, ou peut-être a-t-il trahi la Nation au profit du Ver. Vous travaillez, ainsi que votre descendance, pour tenter de redorer votre nom"
       }
     ],
     "rituels": [
-      { "name": null, "level": 0 },
-      { "name": null, "level": 0 },
-      { "name": null, "level": 0 },
-      { "name": null, "level": 0 },
-      { "name": null, "level": 0 }
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null }
     ],
     "talents": [
       { "name": "Athlétisme", "level": null },
@@ -127,24 +164,24 @@
       { "name": "Chevaliers Verts", "level": null }
     ],
     "legends": [
-      { "name": "Alpes", "level": 1 },
+      { "name": "Alpes", "level": null },
       { "name": "Ardennes", "level": null },
       { "name": "Bassin Méditerranéen", "level": null },
       { "name": "Bourgogne", "level": null },
       { "name": "Bretagnes", "level": null },
-      { "name": "Ile-de-France", "level": 1 },
+      { "name": "Ile-de-France", "level": null },
       { "name": "Massif Central", "level": null },
       { "name": "Nord", "level": null },
       { "name": "Normandie", "level": null },
       { "name": "Pays de la Loire", "level": null },
       { "name": "Picardie", "level": null },
       { "name": "Vosges et Forêt Noire", "level": 1 },
-      { "name": "Crocs d'Argent", "level": 1 },
+      { "name": "Crocs d'Argent", "level": null },
       { "name": "Enfants de Gaea", "level": null },
       { "name": "Fianna", "level": null },
       { "name": "Fils de Fenrir", "level": null },
       { "name": "Furies Noires", "level": null },
-      { "name": "Gardiens d'Anubis", "level": 1 },
+      { "name": "Gardiens d'Anubis", "level": null },
       { "name": "Marcheurs sur Verre", "level": null },
       { "name": "Rongeurs d'Os", "level": null },
       { "name": "Seigneurs de l'Ombre", "level": null },
