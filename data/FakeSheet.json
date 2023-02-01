@@ -18,18 +18,18 @@
     },
     "auspicePower": [
       {
-        "name": "Pouvoir 1",
+        "name": "Infiltration",
         "level": 0,
-        "description": "blablabla"
+        "description": "Votre petite taille vous permet de vous faufiler plus facilement que n’importe qui devant des humains. Votre Furtivité augmente de 1."
       },
       {
-        "name": "Pouvoir 2",
+        "name": "Sens accru",
         "level": 0,
-        "description": "blablabla"
+        "description": "Vous pouvez sentir toutes les odeurs présentes dans une pièce, et au fur et à mesure que vous « zoomez » sur l’une vous pouvez obtenir des informations précises la concernant."
       }
     ],
     "attributes": {
-      "str": 2,
+      "str": 5,
       "dex": 3,
       "sta": 3,
       "cha": 5,
@@ -43,7 +43,6 @@
       {
         "name": "Sang Surnaturel",
         "level": 0,
-
         "description": "Vous avez dans les veines un sang ancien, autre que Lupin, qui court. Que ce soit des Fées, des Ferae, ou d’autres choses dont vous n’avez même pas connaissance, vous avez une vision plus ouverte du monde, et potentiellement des alliés cachés qui pourraient vous aider."
       },
       {
@@ -78,6 +77,15 @@
       }
     ],
     "rituels": [
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null }
+    ],
+    "cry": [
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null },
       { "name": null, "level": 0, "description": null },
       { "name": null, "level": 0, "description": null },
       { "name": null, "level": 0, "description": null },
@@ -203,6 +211,19 @@
       { "name": "Mages", "level": null },
       { "name": "Fantômes", "level": null },
       { "name": "Fée", "level": null }
-    ]
+    ],
+    "dons": [
+      {
+        "name": "Aura de confiance",
+        "level": 0,
+        "description": "1 pt de volonté : Le Seigneur de l’Ombre concentre sa volonté pour paraître plus humain, sa Rage se tasse, son aura devient celle d’un simple humain pendant une heure (jusqu’à ce qu’il dépense un point de Rage), personne ne peut plus deviner sa nature profonde, de plus il gagne un point en Subterfuge."
+      },
+      {
+        "name": "Dans les ombres",
+        "level": 0,
+        "description": "1 pt de Gnose : Le Seigneur de l’Ombre concentre les ombres d’une pièce autour de lui, s’il se place dans un coin il peut disparaître pour une durée de 15 minutes au point de devenir invisible, seuls certains pouvoirs surnaturels permettent de repérer potentiellement le Garou. S’il se déplace, les ombres l’accompagnent, il perd donc cet aspect invisible."
+      }
+    ],
+    "influences": []
   }
 ]

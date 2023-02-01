@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import { Stack, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { Stack, Typography, Accordion, AccordionSummary, AccordionDetails, Skeleton } from '@mui/material';
 import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
 
 export default function AccordionModelLevel({ array, title }) {
@@ -18,14 +18,18 @@ export default function AccordionModelLevel({ array, title }) {
       </AccordionSummary>
       <AccordionDetails sx={{ p: '0rem 1rem', paddingTop: 0 }}>
         <Stack spacing={0.5} direction="row" sx={{ justifyContent: 'center', flexWrap: 'wrap' }}>
-          {array.map((item, index) =>
-            item.level != null ? (
-              <Typography key={index}>
-                <b>{item.name}:</b> {item.level} |
-              </Typography>
-            ) : (
-              <div key={index} style={{ display: 'hidden' }} />
+          {array ? (
+            array.map((item, index) =>
+              item.level != null ? (
+                <Typography key={index}>
+                  <b>{item.name}:</b> {item.level} |
+                </Typography>
+              ) : (
+                <div key={index} style={{ display: 'hidden' }} />
+              )
             )
+          ) : (
+            <Skeleton />
           )}
         </Stack>
       </AccordionDetails>
