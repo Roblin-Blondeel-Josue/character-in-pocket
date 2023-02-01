@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Header from '../component/Header';
-import Sheet from '../component/caracterSheet/Sheet';
+import Sheet from '../component/Sheet';
 
 export default function Home() {
   return (

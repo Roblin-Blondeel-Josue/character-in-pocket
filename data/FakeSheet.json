@@ -10,9 +10,26 @@
     "attitude": "Seducteur",
     "gnose": 2,
     "willpower": 2,
-    "auspice": { "name": "Philodox", "moon": "Demi-Lune Partielle", "bonus": "blabla", "rage": 6 },
+    "auspice": {
+      "name": "Philodox",
+      "moon": "Demi-Lune Partielle",
+      "bonus": "Vous obtenez deux pouvoirs de Lupus et utiliser  un don nécessitant de la Gnose sans en dépenser une fois par session de jeu.",
+      "rage": 6
+    },
+    "auspicePower": [
+      {
+        "name": "Infiltration",
+        "level": 0,
+        "description": "Votre petite taille vous permet de vous faufiler plus facilement que n’importe qui devant des humains. Votre Furtivité augmente de 1."
+      },
+      {
+        "name": "Sens accru",
+        "level": 0,
+        "description": "Vous pouvez sentir toutes les odeurs présentes dans une pièce, et au fur et à mesure que vous « zoomez » sur l’une vous pouvez obtenir des informations précises la concernant."
+      }
+    ],
     "attributes": {
-      "str": 2,
+      "str": 5,
       "dex": 3,
       "sta": 3,
       "cha": 5,
@@ -25,27 +42,55 @@
     "avantages": [
       {
         "name": "Sang Surnaturel",
+        "level": 0,
         "description": "Vous avez dans les veines un sang ancien, autre que Lupin, qui court. Que ce soit des Fées, des Ferae, ou d’autres choses dont vous n’avez même pas connaissance, vous avez une vision plus ouverte du monde, et potentiellement des alliés cachés qui pourraient vous aider."
       },
       {
         "name": "Indomptable",
+        "level": 0,
         "description": "Vous êtes difficile à maîtriser. Les actions surnaturelles de domination, notamment des Vampires, ne nécessitent plus de dépenser de la Volonté mais uniquement de la Rage pour y résister. De plus, vous pouvez ignorer un ordre surnaturel par soir."
       },
       {
+        "name": null,
+        "level": 0,
+        "description": null
+      },
+      {
+        "name": null,
+        "level": 0,
+        "description": null
+      },
+      {
+        "name": null,
+        "level": 0,
+        "description": null
+      },
+      {
         "name": "Borgne",
+        "level": 0,
         "description": "Vous avez un œil en moins, certes cicatrisé, mais qui vous handicape toujours. La vision en 3 dimensions est impossible, et malgré le prestige de la cicatrice vous êtes sacrément handicapé dans toutes les utilisations de Perception. Celle-ci est divisé par 2 dès qu’elle fait intervenir la vue, arrondie à l’inférieur."
       },
       {
         "name": "Ancêtre Dément",
+        "level": 0,
         "description": "Votre famille a été entachée, par le passé, par un ancêtre qui a commis de sacrés saccages dans la Nation ou dans votre Tribu. Peut-être est-il responsable de la chute d’un Sept célèbre, ou peut-être a-t-il trahi la Nation au profit du Ver. Vous travaillez, ainsi que votre descendance, pour tenter de redorer votre nom"
       }
     ],
     "rituels": [
-      { "name": null, "level": 0 },
-      { "name": null, "level": 0 },
-      { "name": null, "level": 0 },
-      { "name": null, "level": 0 },
-      { "name": null, "level": 0 }
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null }
+    ],
+    "cry": [
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null },
+      { "name": null, "level": 0, "description": null }
     ],
     "talents": [
       { "name": "Athlétisme", "level": null },
@@ -127,24 +172,24 @@
       { "name": "Chevaliers Verts", "level": null }
     ],
     "legends": [
-      { "name": "Alpes", "level": 1 },
+      { "name": "Alpes", "level": null },
       { "name": "Ardennes", "level": null },
       { "name": "Bassin Méditerranéen", "level": null },
       { "name": "Bourgogne", "level": null },
       { "name": "Bretagnes", "level": null },
-      { "name": "Ile-de-France", "level": 1 },
+      { "name": "Ile-de-France", "level": null },
       { "name": "Massif Central", "level": null },
       { "name": "Nord", "level": null },
       { "name": "Normandie", "level": null },
       { "name": "Pays de la Loire", "level": null },
       { "name": "Picardie", "level": null },
       { "name": "Vosges et Forêt Noire", "level": 1 },
-      { "name": "Crocs d'Argent", "level": 1 },
+      { "name": "Crocs d'Argent", "level": null },
       { "name": "Enfants de Gaea", "level": null },
       { "name": "Fianna", "level": null },
       { "name": "Fils de Fenrir", "level": null },
       { "name": "Furies Noires", "level": null },
-      { "name": "Gardiens d'Anubis", "level": 1 },
+      { "name": "Gardiens d'Anubis", "level": null },
       { "name": "Marcheurs sur Verre", "level": null },
       { "name": "Rongeurs d'Os", "level": null },
       { "name": "Seigneurs de l'Ombre", "level": null },
@@ -166,6 +211,19 @@
       { "name": "Mages", "level": null },
       { "name": "Fantômes", "level": null },
       { "name": "Fée", "level": null }
-    ]
+    ],
+    "dons": [
+      {
+        "name": "Aura de confiance",
+        "level": 0,
+        "description": "1 pt de volonté : Le Seigneur de l’Ombre concentre sa volonté pour paraître plus humain, sa Rage se tasse, son aura devient celle d’un simple humain pendant une heure (jusqu’à ce qu’il dépense un point de Rage), personne ne peut plus deviner sa nature profonde, de plus il gagne un point en Subterfuge."
+      },
+      {
+        "name": "Dans les ombres",
+        "level": 0,
+        "description": "1 pt de Gnose : Le Seigneur de l’Ombre concentre les ombres d’une pièce autour de lui, s’il se place dans un coin il peut disparaître pour une durée de 15 minutes au point de devenir invisible, seuls certains pouvoirs surnaturels permettent de repérer potentiellement le Garou. S’il se déplace, les ombres l’accompagnent, il perd donc cet aspect invisible."
+      }
+    ],
+    "influences": []
   }
 ]

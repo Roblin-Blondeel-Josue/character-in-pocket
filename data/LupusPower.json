@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Infiltration",
+    "level": 0,
+    "description": "Votre petite taille vous permet de vous faufiler plus facilement que n’importe qui devant des humains. Votre Furtivité augmente de 1."
+  },
+  {
+    "name": "Sens accru",
+    "level": 0,
+    "description": "Vous pouvez sentir toutes les odeurs présentes dans une pièce, et au fur et à mesure que vous « zoomez » sur l’une vous pouvez obtenir des informations précises la concernant."
+  },
+  {
+    "name": "Peau de caméléon",
+    "level": 0,
+    "description": "1 points de Gnose .Sous lumière naturelle, ou dans la lumière d’une rue nocturne, vous pouvez apparaître flou, presque invisible. Ce pouvoir ne marche pas dans une pièce éclairée suffisamment à la lumière artificielle."
+  },
+  {
+    "name": "Silencieux",
+    "level": 0,
+    "description": "Vos pas ne font aucun bruit et ce sur tous les sols possibles et imaginables, vous n’avez plus de malus pour vous déplacer en Furtivité."
+  },
+  {
+    "name": "Yeux de chats",
+    "level": 0,
+    "description": "Vous voyez dans les ténèbres les plus opaques comme en plein jour"
+  }
+]
