@@ -1,0 +1,99 @@
+[
+  {
+    "name": "Louveteau",
+    "clans": [{ "name": "Aucun" }]
+  },
+  {
+    "name": "Crocs d'Argent",
+    "clans": [
+      { "name": "Famille d'Hautcourt" },
+      { "name": "Famille d'Herberive" },
+      { "name": "Famille Dutueil" },
+      { "name": "Famille Gossein" },
+      { "name": "Indépendant" }
+    ]
+  },
+  {
+    "name": "Enfants de Gaia",
+    "clans": [
+      { "name": "Les Filles de Demeter" },
+      { "name": "L'Arbre véritable" },
+      { "name": "Les Chercheurs" },
+      { "name": "L'Oeuvre patiente" },
+      { "name": "Le Cimier de la Corne" }
+    ]
+  },
+  {
+    "name": "Fiannas",
+    "clans": [
+      { "name": "Questeurs d'Ys" },
+      { "name": "La Nouvelle Hermine" },
+      { "name": "Les Enfants du Reflet" },
+      { "name": "Le Sang de Finn" },
+      { "name": "La Chasse Sauvage" }
+    ]
+  },
+  {
+    "name": "Fils de Fenrir",
+    "clans": [
+      { "name": "Néo Asgard" },
+      { "name": "La Chevauchée Fantastique" },
+      { "name": "La Main de Tyr" },
+      { "name": "La Fraternité Millénaire" }
+    ]
+  },
+  {
+    "name": "Furies Noires",
+    "clans": [
+      { "name": "Les Filles de Thémis" },
+      { "name": "La Sororité" },
+      { "name": "L'Ordre de Sainté-Mère Miséricorde" },
+      { "name": "Les Filles de la Lune" },
+      { "name": "Les Ménades" }
+    ]
+  },
+  {
+    "name": "Gardiens d'Anubis",
+    "clans": [
+      { "name": "Les Dagues de Nout" },
+      { "name": "Les Hérauts" },
+      { "name": "Les Larmes d'Anubis" },
+      { "name": "Les Voyageurs" },
+      { "name": "Protecteurs de Bastet" }
+    ]
+  },
+  {
+    "name": "Marcheurs sur Verre",
+    "clans": [
+      { "name": "Les Loups Sociétaires" },
+      { "name": "Les CyberChiens" },
+      { "name": "Dies Ultimae" },
+      { "name": "Les Contradicteurs Aléatoires" },
+      { "name": "Les Primitifs Urbains" }
+    ]
+  },
+  {
+    "name": "Rongeurs d'Os",
+    "clans": [
+      { "name": "Rammstein" },
+      { "name": "Motorhead" },
+      { "name": "Skip the Use" },
+      { "name": "Clash" },
+      { "name": "Nirvana" }
+    ]
+  },
+  {
+    "name": "Seigneurs de l'Ombre",
+    "clans": [
+      { "name": "Les Enfants de Corbeau" },
+      { "name": "La Garde Noire" },
+      { "name": "Les Juges de la Fin" },
+      { "name": "Les Forestiers de la Nuit" },
+      { "name": "Les Illuminés de la tempête" }
+    ]
+  },
+  {
+    "name": "Hurleurs Blanc",
+    "clans": [{ "name": "Aucun" }]
+  }
+]

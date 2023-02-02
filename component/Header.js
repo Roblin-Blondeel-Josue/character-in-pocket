@@ -1,7 +1,9 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { useRouter } from 'next/router';
+import { Box, Button, Typography } from '@mui/material';
 
 export default function Header() {
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -12,9 +14,11 @@ export default function Header() {
         justifyContent: 'center',
       }}
     >
-      <Typography sx={{ color: 'text.secondary' }} variant="h1">
-        Chara'pocket
-      </Typography>
+      <Button onClick={() => router.reload()}>
+        <Typography sx={{ color: 'primary.contrastText' }} variant="h1">
+          Chara'Pocket
+        </Typography>
+      </Button>
     </Box>
   );
 }
