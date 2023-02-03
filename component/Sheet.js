@@ -62,17 +62,22 @@ export default function Sheet() {
         </div>
       ) : (
         <FormControl
-          sx={{ m: '1rem 5vw' }}
+          sx={{ m: '1rem 5vw', display: 'flex' }}
           onSubmit={(event) => event.preventDefault()}
           onKeyDown={(e) => sendCodeKey(e.key, typingCode)}
         >
           <TextField
-            sx={{ bgcolor: 'background.paper', color: 'primary', borderRadius: '5px' }}
+            sx={{ bgcolor: 'background.paper', color: 'primary', borderRadius: '5px', paddingRight: '1rem' }}
             label="Indiquez votre code"
             helperText={error ? 'Uniquement des chiffres' : ''}
             onChange={(e) => handleCode(e.target.value)}
           />
-          <Button onClick={() => setCode(typingCode)}>Envoyez</Button>
+          <Button
+            sx={{ bgcolor: 'secondary.main', color: 'background.paper', marginTop: '.5rem' }}
+            onClick={() => setCode(typingCode)}
+          >
+            Envoyez
+          </Button>
         </FormControl>
       )}
     </div>
