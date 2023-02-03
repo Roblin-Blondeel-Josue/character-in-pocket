@@ -46,7 +46,7 @@ clans
     { name: 'Les Voyageurs' },
     { name: 'Protecteurs de Bastet' },
   ])
-  .set('Marcheurs sur Verres', [
+  .set('Marcheurs sur Verre', [
     { name: 'Sans Clan' },
     { name: 'Les Loups Sociétaires' },
     { name: 'Les CyberChiens' },
