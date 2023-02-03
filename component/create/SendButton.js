@@ -242,7 +242,6 @@ export default function SendButton({ descriptionToPost, auspiceToPost, attribute
         url: 'https://garou-api.onrender.com/sheet/create',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'https://character-in-pocket.vercel.app/',
         },
         data: data,
       };
