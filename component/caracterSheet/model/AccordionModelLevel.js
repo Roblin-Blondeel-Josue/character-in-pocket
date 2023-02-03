@@ -20,7 +20,7 @@ export default function AccordionModelLevel({ array, title }) {
         <Stack spacing={0.5} direction="row" sx={{ justifyContent: 'center', flexWrap: 'wrap' }}>
           {array ? (
             array.map((item, index) =>
-              item.level != null ? (
+              item.level != 0 ? (
                 <Typography key={index}>
                   <b>{item.name}:</b> {item.level} |
                 </Typography>

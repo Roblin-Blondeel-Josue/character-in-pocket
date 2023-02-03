@@ -82,7 +82,7 @@ const palette = {
   divider: alpha(GREY[500], 0.24),
   text: {
     primary: GREY[800],
-    secondary: '#f6f2e4',
+    secondary: '#181D31',
     disabled: GREY[500],
   },
   background: {
