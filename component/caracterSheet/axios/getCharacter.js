@@ -7,6 +7,7 @@ export default async function getCharacter(code) {
     url: `https://garou-api.onrender.com/sheet/character/${code}`,
     headers: {
       'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
     },
     data: '',
   };
