@@ -6,7 +6,7 @@ export default async function getCharacter(code) {
     maxBodyLength: Infinity,
     url: `https://garou-api.onrender.com/sheet/character/${code}`,
     headers: {
-      'Access-Control-Allow-Origin': 'https://character-in-pocket.vercel.app/',
+      'Access-Control-Allow-Origin': 'https://garou-api.onrender.com/',
       'Content-Type': 'application/json',
     },
     data: '',
