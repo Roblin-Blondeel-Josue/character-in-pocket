@@ -251,6 +251,7 @@ export default function AttributesCreate() {
             </Stack>
           </FormControl>
           <Button
+            sx={{ bgcolor: 'secondary.main', color: 'background.paper', marginTop: '.5rem' }}
             onClick={() =>
               sendAttributes(
                 strength,

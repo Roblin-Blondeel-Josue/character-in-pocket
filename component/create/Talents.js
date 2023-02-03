@@ -305,7 +305,7 @@ export default function Talents() {
             </Stack>
           </FormControl>
           <Button
-            sx={{ bgcolor: 'secondary.main', color: 'background.paper' }}
+            sx={{ bgcolor: 'secondary.main', color: 'background.paper', marginTop: '.5rem' }}
             onClick={() =>
               sendTalents(
                 athletisme,
