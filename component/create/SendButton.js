@@ -16,7 +16,7 @@ export default function SendButton({
   const [error, setError] = React.useState(false);
   const [message, setMessage] = React.useState(false);
   const [refresh, setRefresh] = React.useState(false);
-  const { saveDesc, saveAttributes, saveTalents, saveSkills } = useAppContext();
+  const { saveDesc, saveAttributes, saveTalents } = useAppContext();
   React.useEffect(() => {
     setTimeout(() => setError(false), '3000');
     setTimeout(() => setMessage(false), '3000');
@@ -39,7 +39,7 @@ export default function SendButton({
         auspice: {
           name: auspice.name,
           moon: auspice.moon,
-          bonus: auspice.rage,
+          bonus: auspice.bonus,
           rage: auspice.rage,
         },
         attributes: attributes,
