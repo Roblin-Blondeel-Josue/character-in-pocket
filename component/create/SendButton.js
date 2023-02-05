@@ -12,18 +12,27 @@ export default function SendButton({
   talentsToPost,
   codeToPost,
   skillsToPost,
+  legendsToPost,
+  politicsToPost,
 }) {
   const [error, setError] = React.useState(false);
   const [message, setMessage] = React.useState(false);
   const [refresh, setRefresh] = React.useState(false);
-  const { saveDesc, saveAttributes, saveTalents } = useAppContext();
+  const { saveDesc, saveAttributes, saveTalents, saveSkills, savePolitics, saveLegends } = useAppContext();
   React.useEffect(() => {
     setTimeout(() => setError(false), '3000');
     setTimeout(() => setMessage(false), '3000');
   }, [refresh]);
 
-  function postSheet(description, auspice, attributes, talents, code, skills) {
-    if (saveDesc === true && saveAttributes === true && saveTalents === true) {
+  function postSheet(description, auspice, attributes, talents, code, skills, legends, politics) {
+    if (
+      saveDesc === true &&
+      saveAttributes === true &&
+      saveTalents === true &&
+      saveSkills === true &&
+      saveLegends === true &&
+      savePolitics === true
+    ) {
       let data = JSON.stringify({
         code: code,
         player: description.player,
@@ -126,60 +135,8 @@ export default function SendButton({
         ],
         talents: talents,
         skills: skills,
-        politics: [
-          { name: 'Alpes', level: 0 },
-          { name: 'Ardennes', level: 0 },
-          { name: 'Bassin Méditerranéen', level: 0 },
-          { name: 'Bourgogne', level: 0 },
-          { name: 'Bretagnes', level: 0 },
-          { name: 'Ile-de-France', level: 0 },
-          { name: 'Massif Central', level: 0 },
-          { name: 'Nord', level: 0 },
-          { name: 'Normandie', level: 0 },
-          { name: 'Pays de la Loire', level: 0 },
-          { name: 'Picardie', level: 0 },
-          { name: 'Vosges et Forêt Noire', level: 0 },
-          { name: "Crocs d'Argent", level: 0 },
-          { name: 'Enfants de Gaea', level: 0 },
-          { name: 'Fianna', level: 0 },
-          { name: 'Fils de Fenrir', level: 0 },
-          { name: 'Furies Noires', level: 0 },
-          { name: "Gardiens d'Anubis", level: 0 },
-          { name: 'Marcheurs sur Verre', level: 0 },
-          { name: "Rongeurs d'Os", level: 0 },
-          { name: "Seigneurs de l'Ombre", level: 0 },
-          { name: 'Nouvelle Imperium', level: 0 },
-          { name: 'Conféderation', level: 0 },
-          { name: 'Nouvelle Aube', level: 0 },
-          { name: 'Chevaliers Verts', level: 0 },
-        ],
-        legends: [
-          { name: 'Alpes', level: 0 },
-          { name: 'Ardennes', level: 0 },
-          { name: 'Bassin Méditerranéen', level: 0 },
-          { name: 'Bourgogne', level: 0 },
-          { name: 'Bretagnes', level: 0 },
-          { name: 'Ile-de-France', level: 0 },
-          { name: 'Massif Central', level: 0 },
-          { name: 'Nord', level: 0 },
-          { name: 'Normandie', level: 0 },
-          { name: 'Pays de la Loire', level: 0 },
-          { name: 'Picardie', level: 0 },
-          { name: 'Vosges et Forêt Noire', level: 0 },
-          { name: "Crocs d'Argent", level: 0 },
-          { name: 'Enfants de Gaea', level: 0 },
-          { name: 'Fianna', level: 0 },
-          { name: 'Fils de Fenrir', level: 0 },
-          { name: 'Furies Noires', level: 0 },
-          { name: "Gardiens d'Anubis", level: 0 },
-          { name: 'Marcheurs sur Verre', level: 0 },
-          { name: "Rongeurs d'Os", level: 0 },
-          { name: "Seigneurs de l'Ombre", level: 0 },
-          { name: 'Tisseuse', level: 0 },
-          { name: 'Kaos', level: 0 },
-          { name: 'Ver', level: 0 },
-          { name: 'Objets Mystiques', level: 0 },
-        ],
+        politics: politics,
+        legends: legends,
         wod: [
           { name: 'Ananasi', level: 0 },
           { name: 'Bastet', level: 0 },
@@ -239,7 +196,16 @@ export default function SendButton({
       <Button
         sx={{ bgcolor: 'primary.main', color: 'background.paper' }}
         onClick={() =>
-          postSheet(descriptionToPost, auspiceToPost, attributesToPost, talentsToPost, codeToPost, skillsToPost)
+          postSheet(
+            descriptionToPost,
+            auspiceToPost,
+            attributesToPost,
+            talentsToPost,
+            codeToPost,
+            skillsToPost,
+            legendsToPost,
+            politicsToPost
+          )
         }
       >
         Envoyez la fiche
@@ -254,5 +220,7 @@ SendButton.propTypes = {
   attributesToPost: PropTypes.object,
   talentsToPost: PropTypes.array,
   skillsToPost: PropTypes.array,
-  codeToPost: PropTypes.number,
+  politicsToPost: PropTypes.array,
+  legendsToPost: PropTypes.array,
+  codeToPost: PropTypes.string,
 };

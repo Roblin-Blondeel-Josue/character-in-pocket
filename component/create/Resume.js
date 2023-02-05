@@ -16,12 +16,17 @@ export default function Resume() {
     setCode,
     saveSkills,
     skills,
+    legends,
+    saveLegends,
+    politics,
+    savePolitics,
   } = useAppContext();
   const [errorCode, setErrorCode] = React.useState(false);
   const [typingCode, setTypingCode] = React.useState(0);
+  const [messageCode, setMessageCode] = React.useState(false);
 
   function handleCode(value) {
-    if (/[0-9]{1,3}$/.test(value) || value === '') {
+    if ((/[0-9]{4,8}$/.test(value) || value === '') && value != undefined) {
       setErrorCode(false);
       setTypingCode(value);
     } else {
@@ -29,9 +34,16 @@ export default function Resume() {
       setErrorCode(true);
     }
   }
-  function sendCodeKey(key, value) {
-    if (key == 'Enter' && value !== '') {
+  function sendCode(value) {
+    if (value != undefined && value != '' && errorCode === false) {
       setCode(value);
+      setMessageCode(true);
+    }
+  }
+  function sendCodeKey(key, value) {
+    if (value != undefined && key == 'Enter' && value != '' && errorCode === false) {
+      setCode(value);
+      setMessageCode(true);
     }
   }
   return (
@@ -47,23 +59,31 @@ export default function Resume() {
           <br />
           <b>Compétences</b>: {saveSkills ? 'Fait' : 'A faire'}
           <br />
+          <b>Contes & Légendes </b>: {saveLegends ? 'Fait' : 'A faire'}
+          <br />
+          <b>Politiques</b>: {savePolitics ? 'Fait' : 'A faire'}
+          <br />
         </Typography>
-        <div style={{ margin: '1rem 0', display: 'flex', direction: 'row', alignItems: 'center' }}>
-          <FormControl onSubmit={(event) => event.preventDefault()} onKeyDown={(e) => sendCodeKey(e.key, typingCode)}>
-            <TextField
-              sx={{ bgcolor: 'background.paper', color: 'primary', borderRadius: '5px', paddingRight: '1rem' }}
-              label="Choisissez votre code"
-              helperText={errorCode ? 'Uniquement des chiffres.Entre 4 et 8 chiffres' : ''}
-              onChange={(e) => handleCode(e.target.value)}
-            />
-          </FormControl>
-          <Button
-            sx={{ bgcolor: 'secondary.main', color: 'background.paper', marginTop: '.5rem', w: '20px' }}
-            onClick={() => setCode(typingCode)}
-          >
-            Validé
-          </Button>
-        </div>
+        {messageCode === false ? (
+          <div style={{ margin: '1rem 0', display: 'flex', direction: 'row', alignItems: 'center' }}>
+            <FormControl onSubmit={(event) => event.preventDefault()} onKeyDown={(e) => sendCodeKey(e.key, typingCode)}>
+              <TextField
+                sx={{ bgcolor: 'background.paper', color: 'primary', borderRadius: '5px', paddingRight: '1rem' }}
+                label="Choisissez votre code"
+                helperText={errorCode ? 'Uniquement des chiffres.Entre 4 et 8 chiffres' : ''}
+                onChange={(e) => handleCode(e.target.value)}
+              />
+            </FormControl>
+            <Button
+              sx={{ bgcolor: 'secondary.main', color: 'background.paper', marginTop: '.5rem', w: '20px' }}
+              onClick={() => sendCode(typingCode)}
+            >
+              Validé
+            </Button>
+          </div>
+        ) : (
+          'Code Sauvegardé'
+        )}
         <SendButton
           descriptionToPost={description}
           auspiceToPost={auspice}
@@ -71,6 +91,8 @@ export default function Resume() {
           talentsToPost={talents}
           codeToPost={code}
           skillsToPost={skills}
+          legendsToPost={legends}
+          politicsToPost={politics}
         />
       </CardContent>
     </Card>

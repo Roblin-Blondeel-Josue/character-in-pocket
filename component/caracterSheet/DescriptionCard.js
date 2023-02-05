@@ -10,7 +10,7 @@ export default function DescriptionCard({ player }) {
         <Typography variant="body1">
           <b>Joueur :</b> {player.player} | <b>Personnage :</b> {player.character} <br />
           <b>Tribu :</b> {player.tribe} ({player.alliance})<br />
-          <b>Clan :</b> {player.clan} <br />
+          <b>Camps :</b> {player.clan} <br />
           <b>Nature :</b> {player.nature} | <b>Attitude :</b> {player.attitude} <br />
           <b>Meute :</b> {player.pack}
           <br />

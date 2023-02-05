@@ -5,6 +5,8 @@ import DescriptionCreate from './create/Description';
 import Resume from './create/Resume';
 import Talents from './create/Talents';
 import Skills from './create/Skills';
+import Politcs from './create/Politics';
+import Legends from './create/Legends';
 
 export default function Create() {
   return (
@@ -13,6 +15,8 @@ export default function Create() {
       <AttributesCreate />
       <Talents />
       <Skills />
+      <Legends />
+      <Politcs />
       <Resume />
     </CreateWrapper>
   );
