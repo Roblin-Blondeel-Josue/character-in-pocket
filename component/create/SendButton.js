@@ -254,5 +254,5 @@ SendButton.propTypes = {
   attributesToPost: PropTypes.object,
   talentsToPost: PropTypes.array,
   skillsToPost: PropTypes.array,
-  codeToPost: PropTypes.number,
+  codeToPost: PropTypes.string,
 };
