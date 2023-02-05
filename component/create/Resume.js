@@ -91,6 +91,8 @@ export default function Resume() {
           talentsToPost={talents}
           codeToPost={code}
           skillsToPost={skills}
+          legendsToPost={legends}
+          politicsToPost={politics}
         />
       </CardContent>
     </Card>
