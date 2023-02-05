@@ -76,7 +76,7 @@ export default function DescriptionCreate() {
   const [errorWillpower, setErrorWillpower] = React.useState(false);
   //Function change
   function handlePlayer(value) {
-    if (/^[a-zA-Z0-9éèàùûêâôë-]{1}[a-zA-Z0-9éèàùûêâôë-\s]*[a-zA-Z0-9éèàùûêâôë]$/.test(value) || value === '') {
+    if (/^[a-zA-Z0-9éèàùûêâôëîï-]{1}[a-zA-Z0-9éèàùûêâôëîï-\s]*[a-zA-Z0-9éèàùûêâôëîï]$/.test(value) || value === '') {
       setPlayer(value);
       setErrorPlayer(false);
     } else {
@@ -85,7 +85,7 @@ export default function DescriptionCreate() {
     }
   }
   function handleCharacter(value) {
-    if (/^[a-zA-Zéèàùûêâôë-]{1}[a-zA-Zéèàùûêâôë-\s]*[a-zA-Zéèàùûêâôë]$/.test(value) || value === '') {
+    if (/^[a-zA-Zéèàùûêâôëîï-]{1}[a-zA-Zéèàùûêâôëîï-\s]*[a-zA-Zéèàùûêâôëîï]$/.test(value) || value === '') {
       setCharacter(value);
       setErrorCharacter(false);
     } else {
@@ -94,7 +94,7 @@ export default function DescriptionCreate() {
     }
   }
   function handlePack(value) {
-    if (/^[a-zA-Zéèàùûêâôë-]{1}[a-zA-Zéèàùûêâôë-\s]*[a-zA-Zéèàùûêâôë]$/.test(value) || value === '') {
+    if (/^[a-zA-Zéèàùûêâôëîï-]{1}[a-zA-Zéèàùûêâôëîï-\s]*[a-zA-Zéèàùûêâôëîï]$/.test(value) || value === '') {
       setPack(value);
       setErrorPack(false);
     } else {

@@ -17,12 +17,12 @@ export default function Powers({ rituels, cry, auspice, auspicePower, dons }) {
       ) : (
         <div style={{ display: 'hidden' }} />
       )}
-      {auspice.name === 'Philodox' ? (
+      {auspice.moon === 'Demi-Lune de Lune ascendante' ? (
         <AccordionModelDescription array={auspicePower} title={`Pouvoir : ${auspice.name}`} />
       ) : (
         <div style={{ display: 'hidden' }} />
       )}
-      {auspice.moon === 'Nouvelle Lune' ? (
+      {auspice.moon === 'Nouvelle Lune partielle' ? (
         <AccordionModelDescription array={LupusPower} title={`Pouvoir : ${auspice.name}`} />
       ) : (
         <div style={{ display: 'hidden' }} />
