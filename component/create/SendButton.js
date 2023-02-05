@@ -5,20 +5,27 @@ import { useAppContext } from './CreateContext';
 import axios from 'axios';
 import React from 'react';
 
-export default function SendButton({ descriptionToPost, auspiceToPost, attributesToPost, talentsToPost }) {
+export default function SendButton({
+  descriptionToPost,
+  auspiceToPost,
+  attributesToPost,
+  talentsToPost,
+  codeToPost,
+  skillsToPost,
+}) {
   const [error, setError] = React.useState(false);
   const [message, setMessage] = React.useState(false);
   const [refresh, setRefresh] = React.useState(false);
-  const { saveDesc, saveAttributes, saveTalents } = useAppContext();
+  const { saveDesc, saveAttributes, saveTalents, saveSkills } = useAppContext();
   React.useEffect(() => {
     setTimeout(() => setError(false), '3000');
     setTimeout(() => setMessage(false), '3000');
   }, [refresh]);
 
-  function postSheet(description, auspice, attributes, talents) {
+  function postSheet(description, auspice, attributes, talents, code, skills) {
     if (saveDesc === true && saveAttributes === true && saveTalents === true) {
       let data = JSON.stringify({
-        code: 2,
+        code: code,
         player: description.player,
         character: description.character,
         tribe: description.tribe,
@@ -118,42 +125,7 @@ export default function SendButton({ descriptionToPost, auspiceToPost, attribute
           },
         ],
         talents: talents,
-        skills: [
-          { name: 'Animaux', level: 0 },
-          { name: 'Arme de Poing', level: 0 },
-          { name: 'Fusil de précision', level: 0 },
-          { name: 'Fusil automatique', level: 0 },
-          { name: 'Fusil à pompe', level: 0 },
-          { name: 'Forge', level: 0 },
-          { name: 'Bois', level: 0 },
-          { name: 'Maçonnerie', level: 0 },
-          { name: 'Joaillerie', level: 0 },
-          { name: 'Fab. arme à feu', level: 0 },
-          { name: 'Moto', level: 0 },
-          { name: 'Voiture/Camion', level: 0 },
-          { name: 'Bateau', level: 0 },
-          { name: 'Hélicoptère', level: 0 },
-          { name: 'Avion', level: 0 },
-          { name: 'Démolition', level: 0 },
-          { name: 'Erudition', level: 0 },
-          { name: 'Informatique', level: 0 },
-          { name: 'Médecine', level: 0 },
-          { name: 'Dague', level: 3 },
-          { name: 'Epée', level: 0 },
-          { name: 'Hache', level: 0 },
-          { name: 'Marteau', level: 0 },
-          { name: 'Lance', level: 0 },
-          { name: 'Arme improvisée', level: 0 },
-          { name: 'Contes', level: 0 },
-          { name: 'Chant', level: 0 },
-          { name: 'Danse', level: 0 },
-          { name: 'Musique', level: 0 },
-          { name: 'Rituel', level: 0 },
-          { name: 'Technologie', level: 0 },
-          { name: "Tir à l'arc", level: 0 },
-          { name: 'Javelot', level: 0 },
-          { name: 'Arbalète', level: 0 },
-        ],
+        skills: skills,
         politics: [
           { name: 'Alpes', level: 0 },
           { name: 'Ardennes', level: 0 },
@@ -266,7 +238,9 @@ export default function SendButton({ descriptionToPost, auspiceToPost, attribute
     <div>
       <Button
         sx={{ bgcolor: 'primary.main', color: 'background.paper' }}
-        onClick={() => postSheet(descriptionToPost, auspiceToPost, attributesToPost, talentsToPost)}
+        onClick={() =>
+          postSheet(descriptionToPost, auspiceToPost, attributesToPost, talentsToPost, codeToPost, skillsToPost)
+        }
       >
         Envoyez la fiche
       </Button>
@@ -279,4 +253,6 @@ SendButton.propTypes = {
   auspiceToPost: PropTypes.object,
   attributesToPost: PropTypes.object,
   talentsToPost: PropTypes.array,
+  skillsToPost: PropTypes.array,
+  codeToPost: PropTypes.number,
 };

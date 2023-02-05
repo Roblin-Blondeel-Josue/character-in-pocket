@@ -20,7 +20,14 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function DescriptionCreate() {
   const { setAuspice, setDescription, saveDesc, setSaveDesc } = useAppContext();
-  const alliances = ['Nouvel Impergium', 'Nouvelle Aube', 'Conféderation', 'Chevaliers Verts', "Héritiers de L'Hydre"];
+  const alliances = [
+    '',
+    'Nouvel Impergium',
+    'Nouvelle Aube',
+    'Conféderation',
+    'Chevaliers Verts',
+    "Héritiers de L'Hydre",
+  ];
   const [player, setPlayer] = React.useState('');
   const [character, setCharacter] = React.useState('');
   const [auspiceMoon, setAuspiceMoon] = React.useState('');

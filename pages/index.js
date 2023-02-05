@@ -7,7 +7,7 @@ import Sheet from '../component/Sheet';
 
 export default function Home() {
   const [selectSheet, setSelectSheet] = React.useState(false);
-  const [selectCreate, setSelectCreate] = React.useState(false);
+  const [selectCreate, setSelectCreate] = React.useState(true);
   function handleSheet() {
     setSelectCreate(false);
     setSelectSheet(true);
