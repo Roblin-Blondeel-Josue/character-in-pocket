@@ -242,7 +242,6 @@ export default function SendButton({ descriptionToPost, auspiceToPost, attribute
         url: 'https://garou-api.onrender.com/sheet/create',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
         },
         data: data,
       };
@@ -254,7 +253,7 @@ export default function SendButton({ descriptionToPost, auspiceToPost, attribute
         })
         .catch((error) => {
           console.log(error);
-          setError(false);
+          setError(true);
           setRefresh(!refresh);
         });
     } else {
