@@ -4,6 +4,7 @@ import AttributesCreate from './create/Attributes';
 import DescriptionCreate from './create/Description';
 import Resume from './create/Resume';
 import Talents from './create/Talents';
+import Skills from './create/Skills';
 
 export default function Create() {
   return (
@@ -11,6 +12,7 @@ export default function Create() {
       <DescriptionCreate />
       <AttributesCreate />
       <Talents />
+      <Skills />
       <Resume />
     </CreateWrapper>
   );

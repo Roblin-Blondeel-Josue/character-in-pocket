@@ -1,6 +1,7 @@
 const clans = new Map();
 clans
   .set("Crocs d'Argent", [
+    { name: '' },
     { name: 'Indépendant' },
     { name: "Famille d'Hautcourt" },
     { name: "Famille d'Herberive" },
@@ -8,6 +9,7 @@ clans
     { name: 'Famille Gossein' },
   ])
   .set('Enfants de Gaia', [
+    { name: '' },
     { name: 'Sans Clan' },
     { name: 'Les Filles de Demeter' },
     { name: "L'Arbre véritable" },
@@ -16,6 +18,7 @@ clans
     { name: 'Le Cimier de la Corne' },
   ])
   .set('Fiannas', [
+    { name: '' },
     { name: 'Sans Clan' },
     { name: "Questeurs d'Ys" },
     { name: 'La Nouvelle Hermine' },
@@ -24,6 +27,7 @@ clans
     { name: 'La Chasse Sauvage' },
   ])
   .set('Fils de Fenrir', [
+    { name: '' },
     { name: 'Sans Clan' },
     { name: 'Néo Asgard' },
     { name: 'La Chevauchée Fantastique' },
@@ -31,6 +35,7 @@ clans
     { name: 'La Fraternité Millénaire' },
   ])
   .set('Furies Noires', [
+    { name: '' },
     { name: 'Sans Clan' },
     { name: 'Les Filles de Thémis' },
     { name: 'La Sororité' },
@@ -39,6 +44,7 @@ clans
     { name: 'Les Ménades' },
   ])
   .set("Gardiens d'Anubis", [
+    { name: '' },
     { name: 'Sans Clan' },
     { name: 'Les Dagues de Nout' },
     { name: 'Les Hérauts' },
@@ -47,6 +53,7 @@ clans
     { name: 'Protecteurs de Bastet' },
   ])
   .set('Marcheurs sur Verre', [
+    { name: '' },
     { name: 'Sans Clan' },
     { name: 'Les Loups Sociétaires' },
     { name: 'Les CyberChiens' },
@@ -55,6 +62,7 @@ clans
     { name: 'Les Primitifs Urbains' },
   ])
   .set("Rongeurs d'Os", [
+    { name: '' },
     { name: 'Sans Clan' },
     { name: 'Rammstein' },
     { name: 'Motorhead' },
@@ -63,6 +71,7 @@ clans
     { name: 'Nirvana' },
   ])
   .set("Seigneurs de l'Ombre", [
+    { name: '' },
     { name: 'Sans Clan' },
     { name: 'Les Enfants de Corbeau' },
     { name: 'La Garde Noire' },

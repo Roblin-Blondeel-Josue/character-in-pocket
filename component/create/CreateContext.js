@@ -5,6 +5,7 @@ const createSheet = createContext();
 // eslint-disable-next-line react/prop-types
 export function CreateWrapper({ children }) {
   const [description, setDescription] = useState({});
+  const [code, setCode] = useState(0);
   const [auspice, setAuspice] = useState({});
   const [auspicePower, setAuspicePower] = useState([]);
   const [attributes, setAttributes] = useState({});
@@ -14,12 +15,15 @@ export function CreateWrapper({ children }) {
   const [saveDesc, setSaveDesc] = useState(false);
   const [saveAttributes, setSaveAttributes] = useState(false);
   const [saveTalents, setSaveTalents] = useState(false);
+  const [saveSkills, setSaveSkills] = useState(false);
   const [savePolitics, setSavePolitics] = useState(false);
   const sharedState = {
     savePolitics,
     setSavePolitics,
     saveTalents,
     setSaveTalents,
+    saveSkills,
+    setSaveSkills,
     saveAttributes,
     setSaveAttributes,
     saveDesc,
@@ -36,6 +40,8 @@ export function CreateWrapper({ children }) {
     setAvantages,
     talents,
     setTalents,
+    code,
+    setCode,
     skills,
     setSkills,
   };
