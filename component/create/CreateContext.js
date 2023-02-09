@@ -10,6 +10,8 @@ export function CreateWrapper({ children }) {
   const [auspicePower, setAuspicePower] = useState([]);
   const [attributes, setAttributes] = useState({});
   const [avantages, setAvantages] = useState([]);
+  const [handicaps, setHandicaps] = useState([]);
+  const [avanhandi, setAvanhandi] = useState([]);
   const [talents, setTalents] = useState([]);
   const [skills, setSkills] = useState([]);
   const [legends, setLegends] = useState([]);
@@ -22,7 +24,13 @@ export function CreateWrapper({ children }) {
   const [savePolitics, setSavePolitics] = useState(false);
   const [saveLegends, setSaveLegends] = useState(false);
   const [saveWod, setSaveWod] = useState(false);
+  const [saveAvantages, setSaveAvantages] = useState(false);
+  const [saveHandicaps, setSaveHandicaps] = useState(false);
   const sharedState = {
+    saveAvantages,
+    setSaveAvantages,
+    saveHandicaps,
+    setSaveHandicaps,
     legends,
     setLegends,
     politics,
@@ -51,8 +59,12 @@ export function CreateWrapper({ children }) {
     setAuspicePower,
     attributes,
     setAttributes,
+    handicaps,
+    setHandicaps,
     avantages,
     setAvantages,
+    avanhandi,
+    setAvanhandi,
     talents,
     setTalents,
     code,

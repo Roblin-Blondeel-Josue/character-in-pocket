@@ -65,7 +65,7 @@ export default function Talents() {
     setSaveTalents(true);
   }
   return (
-    <Card sx={{ m: '2vh 5vw', width: '90vw' }}>
+    <Card id="talentsCard" sx={{ m: '2vh 5vw', width: '90vw' }}>
       <Accordion>
         <AccordionSummary
           sx={{ p: '.75rem 1.5rem' }}
@@ -305,7 +305,7 @@ export default function Talents() {
             </Stack>
           </FormControl>
           <Button
-            sx={{ bgcolor: 'secondary.main', color: 'background.paper', marginTop: '.5rem' }}
+            sx={{ bgcolor: 'secondary.main', color: 'background.paper', margin: '.5rem 1rem .5rem 0' }}
             onClick={() =>
               sendTalents(
                 athletisme,

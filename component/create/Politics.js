@@ -16,7 +16,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function Politcs() {
   const { setPolitics, savePolitics, setSavePolitics } = useAppContext();
-  const valueAttributes = [0, 1, 2, 3, 4, 5, 6];
+  const valueAttributes = [0, 1, 2, 3, 4, 5];
   const [alpes, setAlpes] = React.useState(0);
   const [ardennes, setArdennes] = React.useState(0);
   const [bassin, setBassin] = React.useState(0);
@@ -100,7 +100,7 @@ export default function Politcs() {
     setSavePolitics(true);
   }
   return (
-    <Card sx={{ m: '2vh 5vw', width: '90vw' }}>
+    <Card id="politicsCard" sx={{ m: '2vh 5vw', width: '90vw' }}>
       <Accordion>
         <AccordionSummary
           sx={{ p: '.75rem 1.5rem' }}
