@@ -38,10 +38,10 @@ export default function Legends() {
   const [marcheur, setMarcheur] = React.useState(0);
   const [rongeur, setRongeur] = React.useState(0);
   const [seigneur, setSeigneur] = React.useState(0);
-  const [impergium, setImpergium] = React.useState(0);
-  const [confé, setConfé] = React.useState(0);
-  const [aube, setAube] = React.useState(0);
-  const [chevalier, setChevalier] = React.useState(0);
+  const [kaos, setKaos] = React.useState(0);
+  const [tisseuse, setTisseuse] = React.useState(0);
+  const [ver, setVer] = React.useState(0);
+  const [objet, setObjet] = React.useState(0);
 
   function sendLegends(
     alpes,
@@ -65,10 +65,10 @@ export default function Legends() {
     marcheur,
     rongeur,
     seigneur,
-    impergium,
-    confé,
-    aube,
-    chevalier
+    kaos,
+    tisseuse,
+    ver,
+    objet
   ) {
     setLegends([
       { name: 'Alpes', level: alpes },
@@ -92,15 +92,15 @@ export default function Legends() {
       { name: 'Marcheurs sur Verre', level: marcheur },
       { name: 'Rongeurs d Os', level: rongeur },
       { name: 'Seigneurs de l Ombre', level: seigneur },
-      { name: 'Nouvel Impergium', level: impergium },
-      { name: 'Conféderation', level: confé },
-      { name: 'Nouvelle Aube', level: aube },
-      { name: 'Chevaliers Vert', level: chevalier },
+      { name: 'Kaos', level: kaos },
+      { name: 'Tisseuse', level: tisseuse },
+      { name: 'Ver', level: ver },
+      { name: 'Objets Mystiques', level: objet },
     ]);
     setSaveLegends(true);
   }
   return (
-    <Card sx={{ m: '2vh 5vw', width: '90vw' }}>
+    <Card id="#legendsCard" sx={{ m: '2vh 5vw', width: '90vw' }}>
       <Accordion>
         <AccordionSummary
           sx={{ p: '.75rem 1.5rem' }}
@@ -325,7 +325,7 @@ export default function Legends() {
                 </Box>
               </Box>
               <Box
-                className="conduite"
+                className="tribu"
                 sx={{
                   display: 'flex',
                   alignItems: 'center',
@@ -333,7 +333,7 @@ export default function Legends() {
                   borderBottom: '1px solid black',
                 }}
               >
-                <Typography>Tribut</Typography>
+                <Typography>Tribu</Typography>
                 <Box>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <Typography sx={{ m: '0 .5rem 0 0' }}>Crocs d Argent : </Typography>
@@ -515,13 +515,13 @@ export default function Legends() {
                   borderBottom: '1px solid black',
                 }}
               >
-                <Typography>Alliances</Typography>
+                <Typography>Trinité</Typography>
                 <Box>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Typography sx={{ m: '0 .5rem 0 0' }}>Nouvel Impergium : </Typography>
+                    <Typography sx={{ m: '0 .5rem 0 0' }}>Kaos : </Typography>
                     <TextField
                       select
-                      onChange={(e) => setImpergium(e.target.value)}
+                      onChange={(e) => setKaos(e.target.value)}
                       SelectProps={{
                         native: true,
                       }}
@@ -534,10 +534,10 @@ export default function Legends() {
                     </TextField>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Typography sx={{ m: '0 .5rem 0 0' }}>Conféderation : </Typography>
+                    <Typography sx={{ m: '0 .5rem 0 0' }}>Tisseuse : </Typography>
                     <TextField
                       select
-                      onChange={(e) => setConfé(e.target.value)}
+                      onChange={(e) => setTisseuse(e.target.value)}
                       SelectProps={{
                         native: true,
                       }}
@@ -550,26 +550,10 @@ export default function Legends() {
                     </TextField>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Typography sx={{ m: '0 .5rem 0 0' }}>Nouvelle Aube : </Typography>
+                    <Typography sx={{ m: '0 .5rem 0 0' }}>Ver : </Typography>
                     <TextField
                       select
-                      onChange={(e) => setAube(e.target.value)}
-                      SelectProps={{
-                        native: true,
-                      }}
-                    >
-                      {valueAttributes.map((value, index) => (
-                        <option key={index} value={value}>
-                          {value}
-                        </option>
-                      ))}
-                    </TextField>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Typography sx={{ m: '0 .5rem 0 0' }}>Chevaliers Vert : </Typography>
-                    <TextField
-                      select
-                      onChange={(e) => setChevalier(e.target.value)}
+                      onChange={(e) => setVer(e.target.value)}
                       SelectProps={{
                         native: true,
                       }}
@@ -583,6 +567,22 @@ export default function Legends() {
                   </div>
                 </Box>
               </Box>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Typography sx={{ m: '0 .5rem 0 0' }}>Objets Mystiques : </Typography>
+                <TextField
+                  select
+                  onChange={(e) => setObjet(e.target.value)}
+                  SelectProps={{
+                    native: true,
+                  }}
+                >
+                  {valueAttributes.map((value, index) => (
+                    <option key={index} value={value}>
+                      {value}
+                    </option>
+                  ))}
+                </TextField>
+              </div>
             </Stack>
           </FormControl>
           <Button
@@ -610,10 +610,10 @@ export default function Legends() {
                 marcheur,
                 rongeur,
                 seigneur,
-                impergium,
-                confé,
-                aube,
-                chevalier
+                kaos,
+                tisseuse,
+                ver,
+                objet
               )
             }
           >

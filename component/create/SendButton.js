@@ -1,7 +1,7 @@
 import { Button, Typography } from '@mui/material';
 import { PropTypes } from 'prop-types';
 import { useAppContext } from './CreateContext';
-
+import { useRouter } from 'next/router';
 import axios from 'axios';
 import React from 'react';
 
@@ -14,24 +14,42 @@ export default function SendButton({
   skillsToPost,
   legendsToPost,
   politicsToPost,
+  wodToPost,
+  avantagesToPost,
 }) {
+  const router = useRouter();
   const [error, setError] = React.useState(false);
+  const [errorSend, setErrorSend] = React.useState(false);
   const [message, setMessage] = React.useState(false);
   const [refresh, setRefresh] = React.useState(false);
-  const { saveDesc, saveAttributes, saveTalents, saveSkills, savePolitics, saveLegends } = useAppContext();
+  const {
+    saveDesc,
+    saveAttributes,
+    saveWod,
+    saveTalents,
+    saveSkills,
+    savePolitics,
+    saveLegends,
+    saveAvantages,
+    saveHandicaps,
+  } = useAppContext();
   React.useEffect(() => {
     setTimeout(() => setError(false), '3000');
+    setTimeout(() => setErrorSend(false), '3000');
     setTimeout(() => setMessage(false), '3000');
   }, [refresh]);
 
-  function postSheet(description, auspice, attributes, talents, code, skills, legends, politics) {
+  function postSheet(description, auspice, attributes, talents, code, skills, legends, politics, wod, avantages) {
     if (
       saveDesc === true &&
       saveAttributes === true &&
       saveTalents === true &&
       saveSkills === true &&
       saveLegends === true &&
-      savePolitics === true
+      savePolitics === true &&
+      saveWod === true &&
+      saveAvantages === true &&
+      saveHandicaps === true
     ) {
       let data = JSON.stringify({
         code: code,
@@ -52,6 +70,7 @@ export default function SendButton({
           rage: auspice.rage,
         },
         attributes: attributes,
+        avantages: avantages,
         auspicePower: [
           {
             name: null,
@@ -137,20 +156,7 @@ export default function SendButton({
         skills: skills,
         politics: politics,
         legends: legends,
-        wod: [
-          { name: 'Ananasi', level: 0 },
-          { name: 'Bastet', level: 0 },
-          { name: 'Corax', level: 0 },
-          { name: 'Gurahl', level: 0 },
-          { name: 'Kitsune', level: 0 },
-          { name: 'Nuwisha', level: 0 },
-          { name: 'Ratkin', level: 0 },
-          { name: 'Vampires', level: 0 },
-          { name: 'Chasseurs', level: 0 },
-          { name: 'Mages', level: 0 },
-          { name: 'Fantômes', level: 0 },
-          { name: 'Fée', level: 0 },
-        ],
+        wod: wod,
         dons: [
           {
             name: null,
@@ -179,10 +185,11 @@ export default function SendButton({
           console.log(JSON.stringify(response.data));
           setMessage(true);
           setRefresh(!refresh);
+          setTimeout(() => router.reload(), 3000);
         })
         .catch((error) => {
           console.log(error);
-          setError(true);
+          setErrorSend(true);
           setRefresh(!refresh);
         });
     } else {
@@ -204,13 +211,17 @@ export default function SendButton({
             codeToPost,
             skillsToPost,
             legendsToPost,
-            politicsToPost
+            politicsToPost,
+            wodToPost,
+            avantagesToPost
           )
         }
       >
         Envoyez la fiche
       </Button>
-      <Typography>{error ? 'Un soucis est survenu' : message ? 'Fiche créee' : ' '}</Typography>
+      <Typography>
+        {errorSend ? 'Un soucis est survenu' : error ? 'Il manque des informations' : message ? 'Fiche créee' : ' '}
+      </Typography>
     </div>
   );
 }
@@ -223,4 +234,6 @@ SendButton.propTypes = {
   politicsToPost: PropTypes.array,
   legendsToPost: PropTypes.array,
   codeToPost: PropTypes.string,
+  wodToPost: PropTypes.array,
+  avantagesToPost: PropTypes.array,
 };

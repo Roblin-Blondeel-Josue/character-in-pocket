@@ -51,7 +51,7 @@ export default function AttributesCreate() {
     setSaveAttributes(true);
   }
   return (
-    <Card sx={{ m: '2vh 5vw' }}>
+    <Card id="attributesCard" sx={{ m: '2vh 5vw' }}>
       <Accordion>
         <AccordionSummary
           sx={{ p: '.75rem 1.5rem' }}
@@ -251,7 +251,7 @@ export default function AttributesCreate() {
             </Stack>
           </FormControl>
           <Button
-            sx={{ bgcolor: 'secondary.main', color: 'background.paper', marginTop: '.5rem' }}
+            sx={{ bgcolor: 'secondary.main', color: 'background.paper', margin: '.5rem 1rem .5rem 0' }}
             onClick={() =>
               sendAttributes(
                 strength,
