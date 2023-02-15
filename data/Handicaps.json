@@ -110,14 +110,78 @@
     "description": "Quelqu’un, quelque part, a une raison personnelle de vous en vouloir. Vous avez une cible sur la tête, et si vous avez déjà eu des preuves de ce fait, ça ne vous empêche pas de ne pas savoir qui, voire même pourquoi."
   },
   {
-    "name": "Dette",
+    "name": "Dette à un humain",
     "level": 0,
-    "description": "Vous avez contracté une dette auprès d’un individu, qu’il soit issu du monde surnaturel ou non. Plus les points sont haut, plus la dette est complexe ou l’individu puissant."
+    "description": "Vous avez contracté une dette auprès d’un humain lambda. Plus les points sont haut, plus la dette est complexe ou l’individu puissant."
   },
-  { "name": "", "level": 0, "description": "" },
-  { "name": "", "level": 0, "description": "" },
-  { "name": "", "level": 0, "description": "" },
-  { "name": "", "level": 0, "description": "" },
-  { "name": "", "level": 0, "description": "" },
-  { "name": "", "level": 0, "description": "" }
+  {
+    "name": "Dette à un humain (MdT)",
+    "level": 0,
+    "description": "Vous avez contracté une dette auprès d’un humain connaissant le monde surnaturel. Plus les points sont haut, plus la dette est complexe ou l’individu puissant."
+  },
+  {
+    "name": "Dette à une créature surnaturelle",
+    "level": 0,
+    "description": "Vous avez contracté une dette auprès d’un individu issu du monde surnaturel. Plus les points sont haut, plus la dette est complexe ou l’individu puissant."
+  },
+  {
+    "name": "Ennemi",
+    "level": 0,
+    "description": "Une organisation, un Tribu, ou un groupe quelconque vous veut énormément de mal. Si ça n’ira pas forcément jusqu’à votre mort, ils tenteront tout et donneront des ordres clairs pour vous nuire personnellement."
+  },
+  {
+    "name": "Famille Indépendante",
+    "level": 0,
+    "description": "Votre famille et vous êtes dans une relation houleuse. Ils rechigneront à vous soutenir à 100%, reculeront devant le danger, et manqueront de confiance en vous. Ils n’en seront pas des traîtres pour autant, et vous pourrez toujours les forcer à faire des choses, en usant de la Force ou de la peur... À vos risques et périls, bien entendu."
+  },
+  {
+    "name": "Inimitié de Camp",
+    "level": 0,
+    "description": "Vous vous êtes heurté avec un Camp dans votre Tribu, déclenchant son ire, que ce soit parce que vous vous êtes moqué de leur objectif, ou même que vous leur avez mis volontairement des bâtons sans les roues."
+  },
+  {
+    "name": "Pupille",
+    "level": 0,
+    "description": "Que ce soit un membre de votre famille ou simplement un jeune à problème, vous avez la responsabilité d’un louveteau. Ses erreurs seront considérés comme les vôtres, aussi mieux vaut vous montrer sévère, tout en sachant qu’il s’agit néanmoins d’un Loup-Garou."
+  },
+  {
+    "name": "Ronin",
+    "level": 0,
+    "description": "Vous avez commi un acte qui a entaché votre nom ou celui de votre Tribu, qui vous a dès lors banni. Vous auriez pu, voir dû, être tué pour votre trahison. Vous êtes seul, sans le soutien d’une Tribu et d’une Alliance. Vous pouvez être accueilli dans une nouvelle organisation, mais celle-ci ferait offense à votre Tribu originelle et devrait bien peser le pour et le contre."
+  },
+  {
+    "name": "Sombre secret",
+    "level": 0,
+    "description": "Vous avez commis une faute, grave, à la Litanie. Le genre de crime qui, s’il s’apprend, vous vaudra au mieux un bannissement comme Ronin de votre Tribu, et au pire une mise à mort sauvage et l’oubli de votre existence."
+  },
+  {
+    "name": "Allergie à l'Argent",
+    "level": 0,
+    "description": "Vous avez une faiblesse à l’argent. Il vous brûle la peau sous forme homidé, il vous est donc impossible d’en saisir plus de quelques secondes, et provoque des dégâts aggravés même lorsqu’il n’est pas pur sous forme Crinos et Glabro."
+  },
+  {
+    "name": "Ancêtre Dément",
+    "level": 0,
+    "description": "Votre famille a été entachée, par le passé, par un ancêtre qui a commis de sacrés saccages dans la Nation ou dans votre Tribu. Peut-être est-il responsable de la chute d’un Sept célèbre, ou peut-être a-t-il trahi la Nation au profit du Ver. Vous travaillez, ainsi que votre descendance, pour tenter de redorer votre nom."
+  },
+  {
+    "name": "Docile",
+    "level": 0,
+    "description": "Votre Rage a du mal à s’exprimer. Vous n’êtes pas faible, mais vous avez juste du mal à lier votre partie Loup à celle de votre partie d’Homme. Vous diminuez de 2 votre Rage maximum et ne parvenez à dépenser votre Rage que dans certaines conditions."
+  },
+  {
+    "name": "Marque de la bête",
+    "level": 0,
+    "description": "Vous portez des stigmates dignes des traditions qu’on appose aux Loup-Garous dans la culture populaire. Un pentagramme sur le dos de la main et un pentagramme sur la paume. Les humains qui vous verront vous prendront simplement pour un cas spécial, mais n’importe qui ayant connaissance de l’existence des Loup-Garous comprendra."
+  },
+  {
+    "name": "Transformation Interdite",
+    "level": 0,
+    "description": "Vous ne pouvez vous transformer que sous certaines conditions bien précises, que la Lune soit visible notamment"
+  },
+  {
+    "name": "Dévoilé",
+    "level": 0,
+    "description": "Votre transformation en Crinos ne provoque pas le Délire chez les humains, ils se souviendront parfaitement vous avoir vu. S’ils ne sauront pas précisément avoir vu un Loup-Garou, la description précise ne laissera aucun doute à personne."
+  }
 ]

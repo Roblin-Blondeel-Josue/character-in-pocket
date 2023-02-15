@@ -169,12 +169,12 @@ export default function DescriptionCreate() {
               {clansList ? (
                 <TextField
                   select
-                  label="Camps"
+                  label="Camp"
                   onChange={(e) => setClan(e.target.value)}
                   SelectProps={{
                     native: true,
                   }}
-                  helperText="Sélectionnez votre Camps"
+                  helperText="Sélectionnez votre Camp"
                 >
                   {clansList.map((clan, index) => (
                     <option key={index} value={clan.name}>

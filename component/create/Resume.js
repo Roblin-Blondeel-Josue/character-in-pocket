@@ -69,72 +69,52 @@ export default function Resume() {
         <Typography variant="h6">Informations Générales</Typography>
         <Stack direction="row" style={{ color: '#000' }}>
           <Typography sx={{ marginBottom: '.5rem', display: 'flex', alignItems: 'center' }}>
-            <a style={{ textDecoration: 'none', color: '#000' }} href="#descriptionCard">
-              Description
-            </a>
+            Description
             <Brightness1Icon sx={saveDesc ? validate : unvalidate} />
           </Typography>
           <Typography sx={{ marginBottom: '.5rem', display: 'flex', alignItems: 'center' }}>
-            <a style={{ textDecoration: 'none', color: '#000' }} href="#attributesCard">
-              Attributs
-            </a>
+            Attributs
             <Brightness1Icon sx={saveAttributes ? validate : unvalidate} />
           </Typography>
         </Stack>
         <Typography variant="h6">Capacités</Typography>
         <Stack direction="row">
           <Typography sx={{ marginBottom: '.5rem', display: 'flex', alignItems: 'center' }}>
-            <a style={{ textDecoration: 'none', color: '#000' }} href="#talentsCard">
-              Talents
-            </a>
+            Talents
             <Brightness1Icon sx={saveTalents ? validate : unvalidate} />
           </Typography>
           <Typography sx={{ marginBottom: '.5rem', display: 'flex', alignItems: 'center' }}>
-            <a style={{ textDecoration: 'none', color: '#000' }} href="#skillsCard">
-              Compétences
-            </a>{' '}
+            Compétences
             <Brightness1Icon sx={saveSkills ? validate : unvalidate} />
           </Typography>
         </Stack>
         <Typography variant="h6">Savoirs</Typography>
         <Stack direction="row" sx={{ flexWrap: 'wrap' }}>
           <Typography sx={{ marginBottom: '.5rem', display: 'flex', alignItems: 'center' }}>
-            <a style={{ textDecoration: 'none', color: '#000' }} href="#legendsCard">
-              Contes & Légendes
-            </a>{' '}
+            Contes & Légendes
             <Brightness1Icon sx={saveLegends ? validate : unvalidate} />
           </Typography>
           <Typography sx={{ marginBottom: '.5rem', display: 'flex', alignItems: 'center' }}>
-            <a style={{ textDecoration: 'none', color: '#000' }} href="#politicsCard">
-              Politiques
-            </a>
+            Politiques
             <Brightness1Icon sx={savePolitics ? validate : unvalidate} />
           </Typography>
           <Typography sx={{ marginBottom: '.5rem', display: 'flex', alignItems: 'center' }}>
-            <a style={{ textDecoration: 'none', color: '#000' }} href="#wodCard">
-              Monde des Ténèbres
-            </a>
+            Monde des Ténèbres
             <Brightness1Icon sx={saveWod ? validate : unvalidate} />
           </Typography>
           <Typography sx={{ marginBottom: '.5rem', display: 'flex', alignItems: 'center' }}>
-            <a style={{ textDecoration: 'none', color: '#000' }} href="#languageCard">
-              Langues
-            </a>
+            Langues
             <Brightness1Icon sx={saveLanguage ? validate : unvalidate} />
           </Typography>
         </Stack>
         <Typography variant="h6">Avantages et Handicaps</Typography>
         <Stack direction="row" sx={{ flexWrap: 'wrap' }}>
           <Typography sx={{ marginBottom: '.5rem', display: 'flex', alignItems: 'center' }}>
-            <a style={{ textDecoration: 'none', color: '#000' }} href="#avantagesCard">
-              Avantages
-            </a>
+            Avantages
             <Brightness1Icon sx={saveAvantages ? validate : unvalidate} />
           </Typography>
           <Typography sx={{ marginBottom: '.5rem', display: 'flex', alignItems: 'center' }}>
-            <a style={{ textDecoration: 'none', color: '#000' }} href="#handicapsCard">
-              Handicaps
-            </a>
+            Handicaps
             <Brightness1Icon sx={saveHandicaps ? validate : unvalidate} />
           </Typography>
         </Stack>

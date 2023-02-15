@@ -15,7 +15,7 @@ import AvantagesList from '../../data/Avantages.json';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function Avantages() {
-  const { setAvantages, saveAvantages, setSaveAvantages } = useAppContext();
+  const { setAvantages, saveAvantages, setSaveAvantages, avantages } = useAppContext();
   const [firstAvantage, setFirstAvantage] = React.useState('Aucun');
   const [secondAvantage, setSecondAvantage] = React.useState('Aucun');
   const [thirdAvantage, setThirdAvantage] = React.useState('Aucun');
@@ -30,6 +30,7 @@ export default function Avantages() {
       { name: avtg5.name, level: 0, description: avtg5.description },
     ]);
     setSaveAvantages(true);
+    console.log(avantages);
   }
   return (
     <Card id="avantagesCard" sx={{ m: '2vh 5vw' }}>
