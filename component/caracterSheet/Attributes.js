@@ -43,7 +43,7 @@ export default function Attributes({ stats }) {
   const pdv = new Map();
   pdv.set(1, 4).set(2, 5).set(3, 7).set(4, 9).set(5, 12).set(6, 15).set(7, 17).set(8, 20).set(9, 25).set(10, 30);
   return (
-    <Card sx={{ m: '2vh 5vw' }}>
+    <Card sx={{ m: '2vh 0', borderRadius: '5px', boxShadow: 3 }}>
       <Accordion>
         <AccordionSummary
           sx={{ p: '.5rem 1rem 0 1rem' }}

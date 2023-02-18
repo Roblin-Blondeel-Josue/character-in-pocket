@@ -12,28 +12,32 @@ import {
 } from '@mui/material';
 import { useAppContext } from './CreateContext';
 import HandicapsList from '../../data/Handicaps.json';
+import InsanityList from '../../data/Insanity.json';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import getHandicap from './map/Handicaps';
+import getInsanity from './map/Insanity';
 
 export default function Handicaps() {
   const { setHandicaps, saveHandicaps, setSaveHandicaps } = useAppContext();
-  const [firstAvantage, setFirstAvantage] = React.useState({ name: 'Aucun', level: 0, description: null });
-  const [secondAvantage, setSecondAvantage] = React.useState({
-    name: 'Aucun',
-    level: 0,
-    description: null,
-  });
-  const [thirdAvantage, setThirdAvantage] = React.useState({
-    name: 'Aucun',
-    level: 0,
-    description: null,
-  });
+  const [firstAvantage, setFirstAvantage] = React.useState({});
+  const [secondAvantage, setSecondAvantage] = React.useState({});
+  const [thirdAvantage, setThirdAvantage] = React.useState({});
+  const [firstAvantageName, setFirstAvantageName] = React.useState('Aucun');
+  const [secondAvantageName, setSecondAvantageName] = React.useState('Aucun');
+  const [thirdAvantageName, setThirdAvantageName] = React.useState('Aucun');
+
+  React.useEffect(() => {
+    setFirstAvantage(getHandicap(firstAvantageName));
+    setSecondAvantage(getHandicap(secondAvantageName));
+    setThirdAvantage(getInsanity(thirdAvantageName));
+  }, [firstAvantageName, secondAvantageName, thirdAvantageName]);
+
   function sendHandicaps(avtg1, avtg2, avtg3) {
-    setHandicaps([getHandicap(avtg1), getHandicap(avtg2), getHandicap(avtg3)]);
+    setHandicaps([avtg1, avtg2, avtg3]);
     setSaveHandicaps(true);
   }
   return (
-    <Card id="handicapsCard" sx={{ m: '2vh 5vw' }}>
+    <Card id="handicapsCard" sx={{ m: '2vh 0', borderRadius: '5px', boxShadow: 3 }}>
       <Accordion>
         <AccordionSummary
           sx={{ p: '.75rem 1.5rem' }}
@@ -49,7 +53,7 @@ export default function Handicaps() {
               <TextField
                 select
                 label="Premier Handicap"
-                onChange={(e) => setFirstAvantage(e.target.value)}
+                onChange={(e) => setFirstAvantageName(e.target.value)}
                 SelectProps={{
                   native: true,
                 }}
@@ -63,7 +67,7 @@ export default function Handicaps() {
               <TextField
                 select
                 label="Second Handicap"
-                onChange={(e) => setSecondAvantage(e.target.value)}
+                onChange={(e) => setSecondAvantageName(e.target.value)}
                 SelectProps={{
                   native: true,
                 }}
@@ -74,18 +78,18 @@ export default function Handicaps() {
                   </option>
                 ))}
               </TextField>
-              {secondAvantage === 'Dérangé' || firstAvantage === 'Dérangé' ? (
+              {secondAvantageName === 'Dérangé' || firstAvantageName === 'Dérangé' ? (
                 <TextField
                   select
-                  label="Trouble"
-                  onChange={(e) => setThirdAvantage(e.target.value)}
+                  label="Dérangement"
+                  onChange={(e) => setThirdAvantageName(e.target.value)}
                   SelectProps={{
                     native: true,
                   }}
                 >
-                  {HandicapsList.map((avantage, index) => (
-                    <option key={index} value={avantage.name}>
-                      {avantage.name}
+                  {InsanityList.map((trouble, index) => (
+                    <option key={index} value={trouble}>
+                      {trouble}
                     </option>
                   ))}
                 </TextField>

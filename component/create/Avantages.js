@@ -12,28 +12,36 @@ import {
 } from '@mui/material';
 import { useAppContext } from './CreateContext';
 import AvantagesList from '../../data/Avantages.json';
+import getAvantages from './map/Avantages';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function Avantages() {
-  const { setAvantages, saveAvantages, setSaveAvantages, avantages } = useAppContext();
-  const [firstAvantage, setFirstAvantage] = React.useState('Aucun');
-  const [secondAvantage, setSecondAvantage] = React.useState('Aucun');
-  const [thirdAvantage, setThirdAvantage] = React.useState('Aucun');
-  const [fourAvantage, setFourAvantage] = React.useState('Aucun');
-  const [fiveAvantage, setFiveAvantage] = React.useState('Aucun');
+  const { setAvantages, saveAvantages, setSaveAvantages } = useAppContext();
+  const [firstAvantageName, setFirstAvantageName] = React.useState('Aucun');
+  const [secondAvantageName, setSecondAvantageName] = React.useState('Aucun');
+  const [thirdAvantageName, setThirdAvantageName] = React.useState('Aucun');
+  const [fourAvantageName, setFourAvantageName] = React.useState('Aucun');
+  const [fiveAvantageName, setFiveAvantageName] = React.useState('Aucun');
+  const [firstAvantage, setFirstAvantage] = React.useState({});
+  const [secondAvantage, setSecondAvantage] = React.useState({});
+  const [thirdAvantage, setThirdAvantage] = React.useState({});
+  const [fourAvantage, setFourAvantage] = React.useState({});
+  const [fiveAvantage, setFiveAvantage] = React.useState({});
+
+  React.useEffect(() => {
+    setFirstAvantage(getAvantages(firstAvantageName));
+    setSecondAvantage(getAvantages(secondAvantageName));
+    setThirdAvantage(getAvantages(thirdAvantageName));
+    setFourAvantage(getAvantages(fourAvantageName));
+    setFiveAvantage(getAvantages(fiveAvantageName));
+  }, [firstAvantageName, secondAvantageName, thirdAvantageName, fourAvantageName, fiveAvantageName]);
+
   function sendAvantages(avtg1, avtg2, avtg3, avtg4, avtg5) {
-    setAvantages([
-      { name: avtg1.name, level: 0, description: avtg1.description },
-      { name: avtg2.name, level: 0, description: avtg2.description },
-      { name: avtg3.name, level: 0, description: avtg3.description },
-      { name: avtg4.name, level: 0, description: avtg4.description },
-      { name: avtg5.name, level: 0, description: avtg5.description },
-    ]);
+    setAvantages([avtg1, avtg2, avtg3, avtg4, avtg5]);
     setSaveAvantages(true);
-    console.log(avantages);
   }
   return (
-    <Card id="avantagesCard" sx={{ m: '2vh 5vw' }}>
+    <Card id="avantagesCard" sx={{ m: '2vh 0', borderRadius: '5px', boxShadow: 3 }}>
       <Accordion>
         <AccordionSummary
           sx={{ p: '.75rem 1.5rem' }}
@@ -49,7 +57,7 @@ export default function Avantages() {
               <TextField
                 select
                 label="Premier Avantage"
-                onChange={(e) => setFirstAvantage(e.target.value)}
+                onChange={(e) => setFirstAvantageName(e.target.value)}
                 SelectProps={{
                   native: true,
                 }}
@@ -63,7 +71,7 @@ export default function Avantages() {
               <TextField
                 select
                 label="Second Avantage"
-                onChange={(e) => setSecondAvantage(e.target.value)}
+                onChange={(e) => setSecondAvantageName(e.target.value)}
                 SelectProps={{
                   native: true,
                 }}
@@ -77,7 +85,7 @@ export default function Avantages() {
               <TextField
                 select
                 label="Troisième Avantage"
-                onChange={(e) => setThirdAvantage(e.target.value)}
+                onChange={(e) => setThirdAvantageName(e.target.value)}
                 SelectProps={{
                   native: true,
                 }}
@@ -91,7 +99,7 @@ export default function Avantages() {
               <TextField
                 select
                 label="Quatrième Avantage"
-                onChange={(e) => setFourAvantage(e.target.value)}
+                onChange={(e) => setFourAvantageName(e.target.value)}
                 SelectProps={{
                   native: true,
                 }}
@@ -105,7 +113,7 @@ export default function Avantages() {
               <TextField
                 select
                 label="Second Avantage"
-                onChange={(e) => setFiveAvantage(e.target.value)}
+                onChange={(e) => setFiveAvantageName(e.target.value)}
                 SelectProps={{
                   native: true,
                 }}

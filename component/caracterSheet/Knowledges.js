@@ -5,7 +5,7 @@ import AccordionModelLevel from './model/AccordionModelLevel';
 
 export default function Attributes({ legends, politics, wod }) {
   return (
-    <Card sx={{ m: '2vh 5vw' }}>
+    <Card sx={{ m: '2vh 0', borderRadius: '5px', boxShadow: 3 }}>
       <AccordionModelLevel array={politics} title="Connaissances : Politiques" />
       <AccordionModelLevel array={legends} title="Connaissances : Contes et Légendes" />
       <AccordionModelLevel array={wod} title="Connaissances : Monde des Ténèbres" />

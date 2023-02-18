@@ -100,7 +100,7 @@ export default function Politcs() {
     setSavePolitics(true);
   }
   return (
-    <Card id="politicsCard" sx={{ m: '2vh 5vw', width: '90vw' }}>
+    <Card id="politicsCard" sx={{ m: '2vh 0', borderRadius: '5px', boxShadow: 3 }}>
       <Accordion>
         <AccordionSummary
           sx={{ p: '.75rem 1.5rem' }}

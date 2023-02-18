@@ -100,7 +100,7 @@ export default function Legends() {
     setSaveLegends(true);
   }
   return (
-    <Card id="#legendsCard" sx={{ m: '2vh 5vw', width: '90vw' }}>
+    <Card id="#legendsCard" sx={{ m: '2vh 0', borderRadius: '5px', boxShadow: 3 }}>
       <Accordion>
         <AccordionSummary
           sx={{ p: '.75rem 1.5rem' }}

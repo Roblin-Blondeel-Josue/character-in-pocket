@@ -29,6 +29,8 @@ export default function Resume() {
     handicaps,
     avanhandi,
     setAvanhandi,
+    dons,
+    saveDons,
   } = useAppContext();
   const saveLanguage = false;
   const [errorCode, setErrorCode] = React.useState(false);
@@ -38,7 +40,6 @@ export default function Resume() {
     setAvanhandi(avantages.concat(handicaps));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [avantages, handicaps]);
-
   const validate = { color: 'success.main', margin: '0 1rem' };
   const unvalidate = { color: 'error.main', margin: '0 1rem' };
   function handleCode(value) {
@@ -63,7 +64,7 @@ export default function Resume() {
     }
   }
   return (
-    <Card sx={{ m: '2vh 5vw' }}>
+    <Card sx={{ m: '2vh 0 0 0', borderRadius: '5px' }}>
       <CardHeader sx={{ p: '.75rem' }} title="Progression" />
       <CardContent sx={{ p: '.75rem', paddingTop: '.5rem' }}>
         <Typography variant="h6">Informations Générales</Typography>
@@ -118,6 +119,13 @@ export default function Resume() {
             <Brightness1Icon sx={saveHandicaps ? validate : unvalidate} />
           </Typography>
         </Stack>
+        <Typography variant="h6">Pouvoirs</Typography>
+        <Stack direction="row" sx={{ flexWrap: 'wrap' }}>
+          <Typography sx={{ marginBottom: '.5rem', display: 'flex', alignItems: 'center' }}>
+            Dons
+            <Brightness1Icon sx={saveDons ? validate : unvalidate} />
+          </Typography>
+        </Stack>
         {messageCode === false ? (
           <div
             style={{
@@ -157,6 +165,7 @@ export default function Resume() {
           politicsToPost={politics}
           wodToPost={wod}
           avantagesToPost={avanhandi}
+          donsToPost={dons}
         />
       </CardContent>
     </Card>

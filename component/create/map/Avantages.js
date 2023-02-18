@@ -1,5 +1,6 @@
 const avantages = new Map();
 avantages
+  .set('Aucun', { name: null, level: 0, description: null })
   .set('Ambidextre', {
     name: 'Ambidextre',
     level: 0,

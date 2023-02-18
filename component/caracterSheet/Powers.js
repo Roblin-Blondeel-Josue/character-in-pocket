@@ -6,7 +6,7 @@ import LupusPower from '../../data/LupusPower';
 
 export default function Powers({ rituels, cry, auspice, auspicePower, dons }) {
   return (
-    <Card sx={{ m: '2vh 5vw' }}>
+    <Card sx={{ m: '2vh 0', borderRadius: '5px', boxShadow: 3 }}>
       {rituels !== null && rituels[0].level !== 0 ? (
         <AccordionModelDescription array={rituels} title="Rituels" />
       ) : (

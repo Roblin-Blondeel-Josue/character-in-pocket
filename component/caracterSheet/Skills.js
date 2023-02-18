@@ -5,7 +5,7 @@ import AccordionModelLevel from './model/AccordionModelLevel';
 
 export default function Skills({ talents, skills }) {
   return (
-    <Card sx={{ m: '2vh 5vw' }}>
+    <Card sx={{ m: '2vh 0', borderRadius: '5px', boxShadow: 3 }}>
       <AccordionModelLevel array={talents} title="Talents" />
       <AccordionModelLevel array={skills} title="Compétences" />
     </Card>
