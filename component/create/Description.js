@@ -43,6 +43,7 @@ export default function DescriptionCreate() {
   React.useEffect(() => {
     setClansList(getClans(tribe));
     setAuspice(getAuspice(auspiceMoon));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tribe, auspiceMoon]);
 
   function sendDescription(player, character, tribe, clan, pack, alliance, nature, gnose, willpower) {

@@ -5,7 +5,7 @@ import AccordionModelDescription from './model/AccordionModelDescription';
 
 export default function Avantages({ bonus }) {
   return (
-    <Card sx={{ m: '2vh 5vw' }}>
+    <Card sx={{ m: '2vh 0', borderRadius: '5px', boxShadow: 3 }}>
       <AccordionModelDescription array={bonus} title="Avantages et Désavantages" />
     </Card>
   );

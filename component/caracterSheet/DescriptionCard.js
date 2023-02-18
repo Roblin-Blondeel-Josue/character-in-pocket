@@ -4,7 +4,7 @@ import { Typography, Card, CardHeader, CardContent } from '@mui/material';
 
 export default function DescriptionCard({ player }) {
   return (
-    <Card sx={{ m: '2vh 5vw' }}>
+    <Card sx={{ m: '2vh 0', borderRadius: '5px', boxShadow: 3 }}>
       <CardHeader sx={{ p: '.75rem' }} title="Informations Génerales" />
       <CardContent sx={{ p: '.75rem', paddingTop: '0' }}>
         <Typography variant="body1">
