@@ -1,6 +1,7 @@
 const handicaps = new Map();
 
 handicaps
+  .set('Aucun', { name: null, level: 0, description: null })
   .set('Achromatopsie', {
     name: 'Achromatopsie',
     level: 0,

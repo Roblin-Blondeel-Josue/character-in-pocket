@@ -17,6 +17,7 @@ export function CreateWrapper({ children }) {
   const [legends, setLegends] = useState([]);
   const [politics, setPolitics] = useState([]);
   const [wod, setWod] = useState([]);
+  const [dons, setDons] = useState([]);
   const [saveDesc, setSaveDesc] = useState(false);
   const [saveAttributes, setSaveAttributes] = useState(false);
   const [saveTalents, setSaveTalents] = useState(false);
@@ -26,6 +27,7 @@ export function CreateWrapper({ children }) {
   const [saveWod, setSaveWod] = useState(false);
   const [saveAvantages, setSaveAvantages] = useState(false);
   const [saveHandicaps, setSaveHandicaps] = useState(false);
+  const [saveDons, setSaveDons] = useState(false);
   const sharedState = {
     saveAvantages,
     setSaveAvantages,
@@ -71,6 +73,10 @@ export function CreateWrapper({ children }) {
     setCode,
     skills,
     setSkills,
+    dons,
+    setDons,
+    saveDons,
+    setSaveDons,
   };
 
   return <createSheet.Provider value={sharedState}>{children}</createSheet.Provider>;

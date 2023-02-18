@@ -14,7 +14,7 @@ export default function Header() {
         justifyContent: 'center',
       }}
     >
-      <Button onClick={() => router.reload()}>
+      <Button onClick={() => router.replace('/')}>
         <Typography sx={{ color: 'primary.contrastText' }} variant="h1">
           Chara'Pocket
         </Typography>

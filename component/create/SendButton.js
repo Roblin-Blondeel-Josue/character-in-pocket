@@ -16,6 +16,7 @@ export default function SendButton({
   politicsToPost,
   wodToPost,
   avantagesToPost,
+  donsToPost,
 }) {
   const router = useRouter();
   const [error, setError] = React.useState(false);
@@ -32,6 +33,7 @@ export default function SendButton({
     saveLegends,
     saveAvantages,
     saveHandicaps,
+    saveDons,
   } = useAppContext();
   React.useEffect(() => {
     setTimeout(() => setError(false), '3000');
@@ -39,7 +41,7 @@ export default function SendButton({
     setTimeout(() => setMessage(false), '3000');
   }, [refresh]);
 
-  function postSheet(description, auspice, attributes, talents, code, skills, legends, politics, wod, avantages) {
+  function postSheet(description, auspice, attributes, talents, code, skills, legends, politics, wod, avantages, dons) {
     if (
       saveDesc === true &&
       saveAttributes === true &&
@@ -49,7 +51,8 @@ export default function SendButton({
       savePolitics === true &&
       saveWod === true &&
       saveAvantages === true &&
-      saveHandicaps === true
+      saveHandicaps === true &&
+      saveDons === true
     ) {
       let data = JSON.stringify({
         code: code,
@@ -157,18 +160,7 @@ export default function SendButton({
         politics: politics,
         legends: legends,
         wod: wod,
-        dons: [
-          {
-            name: null,
-            level: 0,
-            description: null,
-          },
-          {
-            name: null,
-            level: 0,
-            description: null,
-          },
-        ],
+        dons: dons,
         influences: [],
       });
       let config = {
@@ -213,7 +205,8 @@ export default function SendButton({
             legendsToPost,
             politicsToPost,
             wodToPost,
-            avantagesToPost
+            avantagesToPost,
+            donsToPost
           )
         }
       >
@@ -236,4 +229,5 @@ SendButton.propTypes = {
   codeToPost: PropTypes.string,
   wodToPost: PropTypes.array,
   avantagesToPost: PropTypes.array,
+  donsToPost: PropTypes.array,
 };

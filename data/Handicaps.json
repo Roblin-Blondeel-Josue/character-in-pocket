@@ -1,5 +1,10 @@
 [
   {
+    "name": "Aucun",
+    "level": 0,
+    "description": null
+  },
+  {
     "name": "Achromatopsie",
     "level": 0,
     "description": "Vous ne percevez pas les couleurs, Tout n’est pour vous qu’une succession de nuances de gris. Ça pose quelques soucis, notamment lorsqu’on vous demande de désamorcer une bombe en coupant le fil rouge."
