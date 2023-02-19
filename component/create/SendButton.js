@@ -17,11 +17,11 @@ export default function SendButton({
   wodToPost,
   avantagesToPost,
   donsToPost,
+  languageToPost,
 }) {
   const router = useRouter();
   const [error, setError] = React.useState(false);
   const [errorSend, setErrorSend] = React.useState(false);
-  const [message, setMessage] = React.useState(false);
   const [refresh, setRefresh] = React.useState(false);
   const {
     saveDesc,
@@ -34,14 +34,27 @@ export default function SendButton({
     saveAvantages,
     saveHandicaps,
     saveDons,
+    saveLanguage,
   } = useAppContext();
   React.useEffect(() => {
     setTimeout(() => setError(false), '3000');
     setTimeout(() => setErrorSend(false), '3000');
-    setTimeout(() => setMessage(false), '3000');
   }, [refresh]);
 
-  function postSheet(description, auspice, attributes, talents, code, skills, legends, politics, wod, avantages, dons) {
+  function postSheet(
+    description,
+    auspice,
+    attributes,
+    talents,
+    code,
+    skills,
+    legends,
+    politics,
+    wod,
+    avantages,
+    dons,
+    language
+  ) {
     if (
       saveDesc === true &&
       saveAttributes === true &&
@@ -50,6 +63,7 @@ export default function SendButton({
       saveLegends === true &&
       savePolitics === true &&
       saveWod === true &&
+      saveLanguage === true &&
       saveAvantages === true &&
       saveHandicaps === true &&
       saveDons === true
@@ -161,6 +175,7 @@ export default function SendButton({
         legends: legends,
         wod: wod,
         dons: dons,
+        language: language,
         influences: [],
       });
       let config = {
@@ -175,9 +190,7 @@ export default function SendButton({
       axios(config)
         .then((response) => {
           console.log(JSON.stringify(response.data));
-          setMessage(true);
-          setRefresh(!refresh);
-          setTimeout(() => router.reload(), 3000);
+          router.replace('/success');
         })
         .catch((error) => {
           console.log(error);
@@ -206,15 +219,14 @@ export default function SendButton({
             politicsToPost,
             wodToPost,
             avantagesToPost,
-            donsToPost
+            donsToPost,
+            languageToPost
           )
         }
       >
         Envoyez la fiche
       </Button>
-      <Typography>
-        {errorSend ? 'Un soucis est survenu' : error ? 'Il manque des informations' : message ? 'Fiche créee' : ' '}
-      </Typography>
+      <Typography>{errorSend ? 'Un soucis est survenu' : error ? 'Il manque des informations' : ' '}</Typography>
     </div>
   );
 }
@@ -230,4 +242,5 @@ SendButton.propTypes = {
   wodToPost: PropTypes.array,
   avantagesToPost: PropTypes.array,
   donsToPost: PropTypes.array,
+  languageToPost: PropTypes.array,
 };
