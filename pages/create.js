@@ -15,6 +15,7 @@ import Avantages from '../component/create/Avantages';
 import Handicaps from '../component/create/Handicaps';
 import Dons from '../component/create/Dons';
 import Header from '../component/Header';
+import Language from '../component/create/Language';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -72,6 +73,7 @@ export default function Create() {
               <Skills />
             </TabPanel>
             <TabPanel value={value} index={2}>
+              <Language />
               <Politcs />
               <Legends />
               <Wod />

@@ -31,8 +31,9 @@ export default function Resume() {
     setAvanhandi,
     dons,
     saveDons,
+    language,
+    saveLanguage,
   } = useAppContext();
-  const saveLanguage = false;
   const [errorCode, setErrorCode] = React.useState(false);
   const [typingCode, setTypingCode] = React.useState(0);
   const [messageCode, setMessageCode] = React.useState(false);
@@ -166,6 +167,7 @@ export default function Resume() {
           wodToPost={wod}
           avantagesToPost={avanhandi}
           donsToPost={dons}
+          languageToPost={language}
         />
       </CardContent>
     </Card>

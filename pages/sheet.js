@@ -45,12 +45,17 @@ export default function Sheet() {
         {code > 0 ? (
           <div>
             {player ? (
-              <div>
+              <div style={{ margin: '5vh 5vw' }}>
                 <DescriptionCard player={player} />
                 <Attributes stats={player.attributes} />
                 <Avantages bonus={player.avantages} />
                 <Skills talents={player.talents} skills={player.skills} />
-                <Knowledges politics={player.politics} legends={player.legends} wod={player.wod} />
+                <Knowledges
+                  politics={player.politics}
+                  legends={player.legends}
+                  wod={player.wod}
+                  languages={player.language}
+                />
                 <Powers
                   rituels={null}
                   cry={null}

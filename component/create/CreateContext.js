@@ -17,6 +17,7 @@ export function CreateWrapper({ children }) {
   const [legends, setLegends] = useState([]);
   const [politics, setPolitics] = useState([]);
   const [wod, setWod] = useState([]);
+  const [language, setLanguage] = useState([]);
   const [dons, setDons] = useState([]);
   const [saveDesc, setSaveDesc] = useState(false);
   const [saveAttributes, setSaveAttributes] = useState(false);
@@ -25,6 +26,7 @@ export function CreateWrapper({ children }) {
   const [savePolitics, setSavePolitics] = useState(false);
   const [saveLegends, setSaveLegends] = useState(false);
   const [saveWod, setSaveWod] = useState(false);
+  const [saveLanguage, setSaveLanguage] = useState(false);
   const [saveAvantages, setSaveAvantages] = useState(false);
   const [saveHandicaps, setSaveHandicaps] = useState(false);
   const [saveDons, setSaveDons] = useState(false);
@@ -39,12 +41,16 @@ export function CreateWrapper({ children }) {
     setPolitics,
     wod,
     setWod,
+    language,
+    setLanguage,
     saveLegends,
     setSaveLegends,
     saveWod,
     setSaveWod,
     savePolitics,
     setSavePolitics,
+    saveLanguage,
+    setSaveLanguage,
     saveTalents,
     setSaveTalents,
     saveSkills,
