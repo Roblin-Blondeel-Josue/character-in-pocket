@@ -10,12 +10,12 @@ import {
   AccordionDetails,
   AccordionSummary,
 } from '@mui/material';
-import { useAppContext } from './CreateContext';
-import Tribes from '../../data/Tribes.json';
-import Auspices from '../../data/Auspices.json';
-import getClans from './map/Clans';
-import Archetypes from '../../data/Archetypes.json';
-import getAuspice from './map/Auspices';
+import { useAppContext } from '../CreateContext';
+import Tribes from '../../../data/Tribes.json';
+import Auspices from '../../../data/Auspices.json';
+import getClans from '../map/Clans';
+import Archetypes from '../../../data/Archetypes.json';
+import getAuspice from '../map/Auspices';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function DescriptionCreate() {

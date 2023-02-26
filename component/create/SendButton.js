@@ -18,6 +18,7 @@ export default function SendButton({
   avantagesToPost,
   donsToPost,
   languageToPost,
+  cryToPost,
 }) {
   const router = useRouter();
   const [error, setError] = React.useState(false);
@@ -53,7 +54,8 @@ export default function SendButton({
     wod,
     avantages,
     dons,
-    language
+    language,
+    cry
   ) {
     if (
       saveDesc === true &&
@@ -137,38 +139,7 @@ export default function SendButton({
             description: null,
           },
         ],
-        cry: [
-          {
-            name: null,
-            level: 0,
-            description: null,
-          },
-          {
-            name: null,
-            level: 0,
-            description: null,
-          },
-          {
-            name: null,
-            level: 0,
-            description: null,
-          },
-          {
-            name: null,
-            level: 0,
-            description: null,
-          },
-          {
-            name: null,
-            level: 0,
-            description: null,
-          },
-          {
-            name: null,
-            level: 0,
-            description: null,
-          },
-        ],
+        cry: cry,
         talents: talents,
         skills: skills,
         politics: politics,
@@ -220,7 +191,8 @@ export default function SendButton({
             wodToPost,
             avantagesToPost,
             donsToPost,
-            languageToPost
+            languageToPost,
+            cryToPost
           )
         }
       >
@@ -243,4 +215,5 @@ SendButton.propTypes = {
   avantagesToPost: PropTypes.array,
   donsToPost: PropTypes.array,
   languageToPost: PropTypes.array,
+  cryToPost: PropTypes.array,
 };
