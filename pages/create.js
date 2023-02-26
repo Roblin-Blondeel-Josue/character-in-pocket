@@ -1,21 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
+import Header from '../component/Header';
 import PropTypes from 'prop-types';
 import { Tabs, Box, Tab } from '@mui/material';
 import { CreateWrapper } from '../component/create/CreateContext';
-import AttributesCreate from '../component/create/Attributes';
-import DescriptionCreate from '../component/create/Description';
+import AttributesCreate from '../component/create/information/Attributes';
+import DescriptionCreate from '../component/create/information/Description';
 import Resume from '../component/create/Resume';
-import Talents from '../component/create/Talents';
-import Skills from '../component/create/Skills';
-import Politcs from '../component/create/Politics';
-import Legends from '../component/create/Legends';
-import Wod from '../component/create/Wod';
-import Avantages from '../component/create/Avantages';
-import Handicaps from '../component/create/Handicaps';
-import Dons from '../component/create/Dons';
-import Header from '../component/Header';
-import Language from '../component/create/Language';
+import Talents from '../component/create/capacity/Talents';
+import Skills from '../component/create/capacity/Skills';
+import Politcs from '../component/create/knowledge/Politics';
+import Legends from '../component/create/knowledge/Legends';
+import Wod from '../component/create/knowledge/Wod';
+import Language from '../component/create/knowledge/Language';
+import Avantages from '../component/create/avantages/Avantages';
+import Handicaps from '../component/create/avantages/Handicaps';
+import Dons from '../component/create/powers/Dons';
+import Cry from '../component/create/powers/Cry';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -84,6 +85,7 @@ export default function Create() {
             </TabPanel>
             <TabPanel value={value} index={4}>
               <Dons />
+              <Cry />
               <div style={{ height: '10vh' }} />
             </TabPanel>
             <TabPanel value={value} index={5}>

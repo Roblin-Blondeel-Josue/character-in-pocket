@@ -33,14 +33,20 @@ export default function Resume() {
     saveDons,
     language,
     saveLanguage,
+    cry,
+    saveCry,
   } = useAppContext();
   const [errorCode, setErrorCode] = React.useState(false);
   const [typingCode, setTypingCode] = React.useState(0);
   const [messageCode, setMessageCode] = React.useState(false);
+  const [ausName, setAusName] = React.useState(false);
   React.useEffect(() => {
     setAvanhandi(avantages.concat(handicaps));
+    if (auspice != {} && auspice != undefined) {
+      setAusName(auspice.name);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [avantages, handicaps]);
+  }, [avantages, handicaps, auspice]);
   const validate = { color: 'success.main', margin: '0 1rem' };
   const unvalidate = { color: 'error.main', margin: '0 1rem' };
   function handleCode(value) {
@@ -126,6 +132,14 @@ export default function Resume() {
             Dons
             <Brightness1Icon sx={saveDons ? validate : unvalidate} />
           </Typography>
+          {ausName === 'Gaillard' ? (
+            <Typography sx={{ marginBottom: '.5rem', display: 'flex', alignItems: 'center' }}>
+              Hurlements
+              <Brightness1Icon sx={saveCry ? validate : unvalidate} />
+            </Typography>
+          ) : (
+            <div style={{ display: 'none' }} />
+          )}
         </Stack>
         {messageCode === false ? (
           <div
@@ -168,6 +182,7 @@ export default function Resume() {
           avantagesToPost={avanhandi}
           donsToPost={dons}
           languageToPost={language}
+          cryToPost={cry}
         />
       </CardContent>
     </Card>

@@ -1,20 +1,21 @@
 import React from 'react';
 import Head from 'next/head';
 import Header from '../component/Header';
-import Attributes from '../component/caracterSheet/Attributes';
-import Avantages from '../component/caracterSheet/Avantages';
-import Skills from '../component/caracterSheet/Skills';
-import Knowledges from '../component/caracterSheet/Knowledges';
-import DescriptionCard from '../component/caracterSheet/DescriptionCard';
-import Powers from '../component/caracterSheet/Powers';
-import { Button, FormControl, Skeleton, TextField } from '@mui/material';
+import { Button, FormControl, TextField } from '@mui/material';
 import { PropTypes } from 'prop-types';
 import getCharacters from '../component/caracterSheet/axios/getCharacter';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useReadContext } from '../component/caracterSheet/SheetContext';
+import SheetCard from '../component/caracterSheet/SheetCard';
 
 export default function Sheet() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down('md'));
   const [code, setCode] = React.useState(0);
   const [typingCode, setTypingCode] = React.useState(0);
   const [error, setError] = React.useState(false);
+  const { setPlayer } = useReadContext();
   function handleCode(value) {
     if (/[0-9]{1,3}$/.test(value) || value === '') {
       setError(false);
@@ -24,15 +25,27 @@ export default function Sheet() {
       setError(true);
     }
   }
-  function sendCodeKey(key, value) {
-    if (key == 'Enter' && value !== '') {
-      setCode(value);
+  function receiveSheet(code) {
+    if (code > 0 && code != '') {
+      if (typeof window !== 'undefined') {
+        const playerData = window.localStorage.getItem(`${code}`);
+        if (playerData !== null) {
+          setPlayer(JSON.parse(playerData));
+          setCode(code);
+        } else {
+          // La clé n'existe pas dans le local storage
+          getCharacters(code).then((response) => {
+            setPlayer(response.result);
+            setCode(code);
+            const playerData = JSON.stringify(response.result);
+            if (typeof window !== 'undefined') {
+              window.localStorage.setItem(`${code}`, playerData);
+            }
+          });
+        }
+      }
     }
   }
-  const [player, setPlayer] = React.useState('');
-  React.useEffect(() => {
-    getCharacters(code).then((response) => setPlayer(response.result));
-  }, [code]);
   return (
     <div>
       <Head>
@@ -43,42 +56,11 @@ export default function Sheet() {
       <main>
         <Header />
         {code > 0 ? (
-          <div>
-            {player ? (
-              <div style={{ margin: '5vh 5vw' }}>
-                <DescriptionCard player={player} />
-                <Attributes stats={player.attributes} />
-                <Avantages bonus={player.avantages} />
-                <Skills talents={player.talents} skills={player.skills} />
-                <Knowledges
-                  politics={player.politics}
-                  legends={player.legends}
-                  wod={player.wod}
-                  languages={player.language}
-                />
-                <Powers
-                  rituels={null}
-                  cry={null}
-                  auspice={player.auspice}
-                  auspicePower={player.auspicePower}
-                  dons={player.dons}
-                />
-              </div>
-            ) : (
-              <div style={{ display: 'flex', flexDirection: 'column', align: 'center' }}>
-                <Skeleton variant="rounded" width="90vw" height="30vh" sx={{ m: '2vh 5vw', borderRadius: '15px' }} />
-                <Skeleton variant="rounded" width="90vw" height="10vh" sx={{ m: '2vh 5vw', borderRadius: '15px' }} />
-                <Skeleton variant="rounded" width="90vw" height="10vh" sx={{ m: '2vh 5vw', borderRadius: '15px' }} />
-                <Skeleton variant="rounded" width="90vw" height="10vh" sx={{ m: '2vh 5vw', borderRadius: '15px' }} />
-                <Skeleton variant="rounded" width="90vw" height="10vh" sx={{ m: '2vh 5vw', borderRadius: '15px' }} />
-              </div>
-            )}
-          </div>
+          <SheetCard />
         ) : (
           <FormControl
-            sx={{ m: '1rem 5vw', display: 'flex' }}
+            sx={matches ? { m: '1rem 5vw', display: 'flex' } : { m: '10vh 40vw', width: '20vw' }}
             onSubmit={(event) => event.preventDefault()}
-            onKeyDown={(e) => sendCodeKey(e.key, typingCode)}
           >
             <TextField
               sx={{ bgcolor: 'background.paper', color: 'primary', borderRadius: '5px', paddingRight: '1rem' }}
@@ -88,7 +70,7 @@ export default function Sheet() {
             />
             <Button
               sx={{ bgcolor: 'secondary.main', color: 'background.paper', marginTop: '.5rem' }}
-              onClick={() => setCode(typingCode)}
+              onClick={() => receiveSheet(typingCode)}
             >
               Envoyez
             </Button>

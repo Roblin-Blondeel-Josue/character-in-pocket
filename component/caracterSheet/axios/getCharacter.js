@@ -11,6 +11,7 @@ export default async function getCharacter(code) {
     data: '',
   };
   const response = await axios(config);
+  console.log('Fiche reçu');
   const list = response.data;
   return list;
 }
