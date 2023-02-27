@@ -24,7 +24,7 @@ export default function DescriptionCreate() {
     '',
     'Nouvel Impergium',
     'Nouvelle Aube',
-    'Conféderation',
+    'Confédération',
     'Chevaliers Verts',
     "Héritiers de L'Hydre",
   ];
@@ -266,7 +266,7 @@ export default function DescriptionCreate() {
           >
             Sauvegardez
           </Button>
-          {saveDesc ? 'Informations Sauvgardées' : ''}
+          {saveDesc ? 'Informations Sauvesgardées' : ''}
         </AccordionDetails>
       </Accordion>
     </Card>

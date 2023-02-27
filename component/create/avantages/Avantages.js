@@ -112,7 +112,7 @@ export default function Avantages() {
               </TextField>
               <TextField
                 select
-                label="Second Avantage"
+                label="Cinquième Avantage"
                 onChange={(e) => setFiveAvantageName(e.target.value)}
                 SelectProps={{
                   native: true,
@@ -132,7 +132,7 @@ export default function Avantages() {
           >
             Sauvegardez
           </Button>
-          {saveAvantages ? 'Informations Sauvgardées' : ''}
+          {saveAvantages ? 'Informations Sauvegardées' : ''}
         </AccordionDetails>
       </Accordion>
     </Card>

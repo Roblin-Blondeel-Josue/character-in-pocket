@@ -29,8 +29,8 @@ export default function Success() {
           <CardContent style={{ padding: '.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Image src={howling} alt="Howling Wolf" width={350} />
             <Typography align="center" variant="body1" sx={{ marginTop: '1rem' }}>
-              Vous venez de sauvegarder votre fiche de personnages. Vous pouvez dès à présent la trouver en entrant
-              votre code sur la page
+              Vous venez de sauvegarder votre fiche de personnage. Vous pouvez dès à présent la trouver en entrant votre
+              code sur la page
             </Typography>
             <Button onClick={() => router.replace('/sheet')}>Voir ma fiche</Button>
             <Typography variant="body2">En cas de soucis, contactez Bellum sur le Discord</Typography>

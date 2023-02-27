@@ -28,8 +28,9 @@ export default function Wod() {
   const [chasseur, setChasseur] = React.useState(0);
   const [fantome, setFantome] = React.useState(0);
   const [fee, setFee] = React.useState(0);
+  const [mage, setMage] = React.useState(0);
 
-  function sendWod(ananasi, bastet, corax, gurahl, kitsune, nuwisha, ratkin, vampire, chasseur, fantome, fee) {
+  function sendWod(ananasi, bastet, corax, gurahl, kitsune, nuwisha, ratkin, vampire, chasseur, fantome, fee, mage) {
     setWod([
       { name: 'Ananasi', level: ananasi },
       { name: 'Bastet', level: bastet },
@@ -42,6 +43,7 @@ export default function Wod() {
       { name: 'Chasseur de monstres', level: chasseur },
       { name: 'Fantôme', level: fantome },
       { name: 'Fée', level: fee },
+      { name: 'Mage', level: mage },
     ]);
     setSaveWod(true);
   }
@@ -254,12 +256,28 @@ export default function Wod() {
                   ))}
                 </TextField>
               </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Typography sx={{ m: '0 .5rem 0 0' }}>Mages : </Typography>
+                <TextField
+                  select
+                  onChange={(e) => setMage(e.target.value)}
+                  SelectProps={{
+                    native: true,
+                  }}
+                >
+                  {valueAttributes.map((value, index) => (
+                    <option key={index} value={value}>
+                      {value}
+                    </option>
+                  ))}
+                </TextField>
+              </div>
             </Stack>
           </FormControl>
           <Button
             sx={{ bgcolor: 'secondary.main', color: 'background.paper', margin: '.5rem 1rem .5rem 0' }}
             onClick={() =>
-              sendWod(ananasi, bastet, corax, gurahl, kitsune, nuwisha, ratkin, vampire, chasseur, fantome, fee)
+              sendWod(ananasi, bastet, corax, gurahl, kitsune, nuwisha, ratkin, vampire, chasseur, fantome, fee, mage)
             }
           >
             Sauvegardez

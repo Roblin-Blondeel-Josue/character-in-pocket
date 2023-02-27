@@ -508,7 +508,7 @@ export default function Skills() {
                   borderBottom: '1px solid black',
                 }}
               >
-                <Typography>Armes de mélées</Typography>
+                <Typography>Armes de mêlées</Typography>
                 <Box>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <Typography sx={{ m: '0 .5rem 0 0' }}>Dague : </Typography>

@@ -92,7 +92,7 @@ export default function AttributesCreate() {
                   </TextField>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                  <Typography sx={{ m: '0 .5rem 0 0' }}>Dexterité : </Typography>
+                  <Typography sx={{ m: '0 .5rem 0 0' }}>Dextérité : </Typography>
                   <TextField
                     select
                     onChange={(e) => setDexterity(e.target.value)}
@@ -268,7 +268,7 @@ export default function AttributesCreate() {
           >
             Terminé
           </Button>
-          {saveAttributes ? 'Informations Sauvgardées' : ''}
+          {saveAttributes ? 'Informations Sauvegardées' : ''}
         </AccordionDetails>
       </Accordion>
     </Card>

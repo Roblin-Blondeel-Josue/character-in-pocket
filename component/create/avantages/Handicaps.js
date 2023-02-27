@@ -104,7 +104,7 @@ export default function Handicaps() {
           >
             Sauvegardez
           </Button>
-          {saveHandicaps ? 'Informations Sauvgardées' : ''}
+          {saveHandicaps ? 'Informations Sauvegardées' : ''}
         </AccordionDetails>
       </Accordion>
     </Card>
