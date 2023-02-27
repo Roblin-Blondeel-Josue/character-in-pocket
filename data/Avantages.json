@@ -50,7 +50,7 @@
     "description": "Vous êtes un Garou connu pour son sens de l’Honneur et le respect strict de celui-ci. Vous devez définir celui dont il s’agit. Vous pouvez ignorer, une fois par soir, une dépense de point de Volonté pour défendre votre Code de l’Honneur."
   },
   {
-    "name": "Force Intérieur",
+    "name": "Force Intérieure",
     "level": 0,
     "description": "À 0 points de vie, vous pouvez vous déplacer en rampant sur une distance de deux mètres en un tour. À la fin du tour vous tombez dans un coma profond."
   },
@@ -90,7 +90,7 @@
     "description": "Quelqu’un vous doit une Faveur, assez énorme pour vous sortir d’une incartade de manière exceptionnelle. Cette Faveur doit être payée, par un principe d’honneur qui est cher à la Nation."
   },
   {
-    "name": "Magnétisme Animale",
+    "name": "Magnétisme Animal",
     "level": 0,
     "description": "Vous dégagez une aura de confiance animale. Vous êtes considéré comme ayant une Apparence supérieure de 1 auprès de tous les humains. Ceci peut même dépasser le seuil maximum de 5. Attention néanmoins, un Attribut de 6 est forcément surnaturel, et vous pouvez renseigner quelqu’un sur votre nature surnaturelle."
   },

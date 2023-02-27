@@ -167,7 +167,7 @@ export default function Language() {
                   style={{ width: '60vw' }}
                   helperText={errorThirdLanguage ? 'Uniquement des lettres et espaces. Min 2 caractères.' : ''}
                   onChange={(e) => handleThirdLanguage(e.target.value)}
-                  label="Première Langue"
+                  label="Troisième Langue"
                 />
                 <TextField
                   select
@@ -187,7 +187,7 @@ export default function Language() {
                   style={{ width: '60vw' }}
                   helperText={errorFourLanguage ? 'Uniquement des lettres et espaces. Min 2 caractères.' : ''}
                   onChange={(e) => handleFourLanguage(e.target.value)}
-                  label="Première Langue"
+                  label="Quatrième Langue"
                 />
                 <TextField
                   select
@@ -221,7 +221,7 @@ export default function Language() {
           >
             Sauvegardez
           </Button>
-          {saveLanguage ? 'Langues Sauvgardées' : ''}
+          {saveLanguage ? 'Langues Sauvegardées' : ''}
           {errorLanguage ? 'Une erreur est survenue' : ''}
         </AccordionDetails>
       </Accordion>

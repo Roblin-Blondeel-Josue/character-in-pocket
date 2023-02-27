@@ -30,7 +30,10 @@ export default function Dons() {
   const [errorSecondDonTribe, setErrorSecondDonTribe] = React.useState(false);
   const [errorSecondDonDesc, setErrorSecondDonDesc] = React.useState(false);
   function handleFirstDonTribe(value) {
-    if (/^[a-zA-Zéèàùûêâôëîï-]{1}[a-zA-Zéèàùûêâôëîï-\s]*[a-zA-Zéèàùûêâôëîï]$/.test(value) || value === '') {
+    if (
+      /^[a-zA-Z0-9éèàùûêâôëî]{1}[a-zA-Z0-9éèàùûêâôëîï\-;:.,\s()]*[a-zA-Z0-9éèàùûêâôëîï\-;:.,()\s]$/.test(value) ||
+      value === ''
+    ) {
       setFirstDonsTribeName(value);
       setErrorFirstDonTribe(false);
     } else {
@@ -39,7 +42,10 @@ export default function Dons() {
     }
   }
   function handleFirstDonDesc(value) {
-    if (/^[a-zA-Z0-9éèàùûêâôëîï-]{1}[a-zA-Z0-9éèàùûêâôëîï:-\s]*[a-zA-Z0-9éèàùûêâôëîï]$/.test(value) || value === '') {
+    if (
+      /^[a-zA-Z0-9éèàùûêâôëî]{1}[a-zA-Z0-9éèàùûêâôëîï\-;:.,\s()]*[a-zA-Z0-9éèàùûêâôëîï\-;:.,()\s]$/.test(value) ||
+      value === ''
+    ) {
       setFirstDonsTribeDesc(value);
       setErrorFirstDonDesc(false);
     } else {
@@ -48,7 +54,12 @@ export default function Dons() {
     }
   }
   function handleSecondDonTribe(value) {
-    if (/^[a-zA-Zéèàùûêâôëîï-]{1}[a-zA-Zéèàùûêâôëîï-\s]*[a-zA-Zéèàùûêâôëîï]$/.test(value) || value === '') {
+    if (
+      /^[a-zA-Z0-9éèàùûêâôëîï\-;:.,\s()]{1}[a-zA-Z0-9éèàùûêâôëîï\-;:.,\s()]*[a-zA-Z0-9éèàùûêâôëîï\-;:.,()\s]$$/.test(
+        value
+      ) ||
+      value === ''
+    ) {
       setSecondDonsTribeName(value);
       setErrorSecondDonTribe(false);
     } else {
@@ -57,7 +68,10 @@ export default function Dons() {
     }
   }
   function handleSecondDonDesc(value) {
-    if (/^[a-zA-Z0-9éèàùûêâôëîï-]{1}[a-zA-Z0-9éèàùûêâôëîï:-\s]*[a-zA-Z0-9éèàùûêâôëîï]$/.test(value) || value === '') {
+    if (
+      /^[a-zA-Z0-9éèàùûêâôëî]{1}[a-zA-Z0-9éèàùûêâôëîï\-;:.,\s()]*[a-zA-Z0-9éèàùûêâôëîï\-;:.,()\s]$/.test(value) ||
+      value === ''
+    ) {
       setSecondDonsTribeDesc(value);
       setErrorSecondDonDesc(false);
     } else {
@@ -139,7 +153,7 @@ export default function Dons() {
                     maxRows={4}
                     helperText={
                       errorFirstDonDesc
-                        ? 'Uniquement des lettres, chiffres, doubles points, tirets et espaces. Min 2 caractères.'
+                        ? 'Uniquement des lettres, chiffres, doubles points, tirets, virgule et espaces. Min 10 mots.'
                         : 'Coût du Don : Description'
                     }
                     onChange={(e) => handleFirstDonDesc(e.target.value)}
@@ -167,7 +181,7 @@ export default function Dons() {
                     maxRows={4}
                     helperText={
                       errorSecondDonDesc
-                        ? 'Uniquement des lettres, chiffres, doubles points, tirets et espaces. Min 2 caractères.'
+                        ? 'Uniquement des lettres, chiffres, doubles points, tirets, virgule et espaces. Min 10 mots.'
                         : 'Coût du Don : Description'
                     }
                     onChange={(e) => handleSecondDonDesc(e.target.value)}

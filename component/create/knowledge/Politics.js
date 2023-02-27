@@ -93,9 +93,9 @@ export default function Politcs() {
       { name: 'Rongeurs d Os', level: rongeur },
       { name: 'Seigneurs de l Ombre', level: seigneur },
       { name: 'Nouvel Impergium', level: impergium },
-      { name: 'Conféderation', level: confé },
+      { name: 'Confédération', level: confé },
       { name: 'Nouvelle Aube', level: aube },
-      { name: 'Chevaliers Vert', level: chevalier },
+      { name: 'Chevaliers Verts', level: chevalier },
     ]);
     setSavePolitics(true);
   }
@@ -108,7 +108,7 @@ export default function Politcs() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography variant="h4">Politques</Typography>
+          <Typography variant="h4">Politiques</Typography>
         </AccordionSummary>
         <AccordionDetails sx={{ p: '.5rem 1rem', justifyContent: 'center' }}>
           <FormControl fullWidth onSubmit={(e) => e.preventDefault()}>
@@ -333,7 +333,7 @@ export default function Politcs() {
                   borderBottom: '1px solid black',
                 }}
               >
-                <Typography>Tribut</Typography>
+                <Typography>Tribu</Typography>
                 <Box>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <Typography sx={{ m: '0 .5rem 0 0' }}>Crocs d Argent : </Typography>
@@ -534,7 +534,7 @@ export default function Politcs() {
                     </TextField>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Typography sx={{ m: '0 .5rem 0 0' }}>Conféderation : </Typography>
+                    <Typography sx={{ m: '0 .5rem 0 0' }}>Confédération : </Typography>
                     <TextField
                       select
                       onChange={(e) => setConfé(e.target.value)}
@@ -566,7 +566,7 @@ export default function Politcs() {
                     </TextField>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Typography sx={{ m: '0 .5rem 0 0' }}>Chevaliers Vert : </Typography>
+                    <Typography sx={{ m: '0 .5rem 0 0' }}>Chevaliers Verts : </Typography>
                     <TextField
                       select
                       onChange={(e) => setChevalier(e.target.value)}
