@@ -17,6 +17,8 @@ import Avantages from '../component/create/avantages/Avantages';
 import Handicaps from '../component/create/avantages/Handicaps';
 import Dons from '../component/create/powers/Dons';
 import Cry from '../component/create/powers/Cry';
+import Rituals from '../component/create/powers/Rituels';
+import Bonus from '../component/create/Bonus';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -86,9 +88,12 @@ export default function Create() {
             <TabPanel value={value} index={4}>
               <Dons />
               <Cry />
-              <div style={{ height: '10vh' }} />
+              <Rituals />
             </TabPanel>
             <TabPanel value={value} index={5}>
+              <Bonus />
+            </TabPanel>
+            <TabPanel value={value} index={6}>
               <Resume />
             </TabPanel>
             <Box
@@ -114,7 +119,8 @@ export default function Create() {
                 <Tab label="Savoirs" {...a11yProps(2)} />
                 <Tab label="Avantages" {...a11yProps(3)} />
                 <Tab label="Pouvoirs" {...a11yProps(4)} />
-                <Tab label="Finalisation" {...a11yProps(5)} />
+                <Tab label="Bonus" {...a11yProps(5)} />
+                <Tab label="Finalisation" {...a11yProps(6)} />
               </Tabs>
             </Box>
           </Box>

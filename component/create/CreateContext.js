@@ -32,8 +32,11 @@ export function CreateWrapper({ children }) {
   const [saveDons, setSaveDons] = useState(false);
   const [cry, setCry] = useState([]);
   const [saveCry, setSaveCry] = useState(false);
-  const [rituels, setRituels] = useState([]);
-  const [saveRituels, setSaveRituels] = useState(false);
+  const [rituals, setRituals] = useState([]);
+  const [saveRituals, setSaveRituals] = useState(false);
+  const [bonusAuspice, setBonusAuspice] = useState({});
+  const [bonusRage, setBonusRage] = useState(0);
+  const [saveBonus, setSaveBonus] = useState(false);
 
   const sharedState = {
     saveAvantages,
@@ -92,10 +95,16 @@ export function CreateWrapper({ children }) {
     setCry,
     saveCry,
     setSaveCry,
-    rituels,
-    setRituels,
-    saveRituels,
-    setSaveRituels,
+    rituals,
+    setRituals,
+    saveRituals,
+    setSaveRituals,
+    bonusAuspice,
+    setBonusAuspice,
+    bonusRage,
+    setBonusRage,
+    saveBonus,
+    setSaveBonus,
   };
 
   return <createSheet.Provider value={sharedState}>{children}</createSheet.Provider>;

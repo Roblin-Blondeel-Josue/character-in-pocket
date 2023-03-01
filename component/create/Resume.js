@@ -35,6 +35,11 @@ export default function Resume() {
     saveLanguage,
     cry,
     saveCry,
+    rituals,
+    saveRituals,
+    bonusAuspice,
+    bonusRage,
+    saveBonus,
   } = useAppContext();
   const [errorCode, setErrorCode] = React.useState(false);
   const [typingCode, setTypingCode] = React.useState(0);
@@ -47,8 +52,10 @@ export default function Resume() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [avantages, handicaps, auspice]);
+
   const validate = { color: 'success.main', margin: '0 1rem' };
   const unvalidate = { color: 'error.main', margin: '0 1rem' };
+
   function handleCode(value) {
     if ((/[0-9]{4,8}$/.test(value) || value === '') && value != undefined) {
       setErrorCode(false);
@@ -132,6 +139,10 @@ export default function Resume() {
             Dons
             <Brightness1Icon sx={saveDons ? validate : unvalidate} />
           </Typography>
+          <Typography sx={{ marginBottom: '.5rem', display: 'flex', alignItems: 'center' }}>
+            Rituels
+            <Brightness1Icon sx={saveRituals ? validate : unvalidate} />
+          </Typography>
           {ausName === 'Gaillard' ? (
             <Typography sx={{ marginBottom: '.5rem', display: 'flex', alignItems: 'center' }}>
               Hurlements
@@ -141,17 +152,28 @@ export default function Resume() {
             <div style={{ display: 'none' }} />
           )}
         </Stack>
+        <Typography variant="h6">Bonus</Typography>
+        <Stack direction="row">
+          <Typography sx={{ marginBottom: '.5rem', display: 'flex', alignItems: 'center' }}>
+            Seconde Auspice & Rage
+            <Brightness1Icon sx={saveBonus ? validate : unvalidate} />
+          </Typography>
+        </Stack>
         {messageCode === false ? (
           <div
             style={{
               margin: '1rem 0',
               display: 'flex',
-              direction: 'row',
+              flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'space-between',
             }}
           >
-            <FormControl onSubmit={(event) => event.preventDefault()} onKeyDown={(e) => sendCodeKey(e.key, typingCode)}>
+            <FormControl
+              fullWidth
+              onSubmit={(event) => event.preventDefault()}
+              onKeyDown={(e) => sendCodeKey(e.key, typingCode)}
+            >
               <TextField
                 sx={{ bgcolor: 'background.paper', color: 'primary', borderRadius: '5px', paddingRight: '1rem' }}
                 label="Choisissez votre code"
@@ -183,6 +205,9 @@ export default function Resume() {
           donsToPost={dons}
           languageToPost={language}
           cryToPost={cry}
+          ritualsToPost={rituals}
+          bonusRageToPost={bonusRage}
+          bonusToPost={bonusAuspice}
         />
       </CardContent>
     </Card>

@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Aucun",
+    "level": 0,
+    "description": null
+  },
+  {
+    "name": "Rituel de Tribu",
+    "level": 0,
+    "description": null
+  },
+  {
+    "name": "Rite de passage",
+    "level": 1,
+    "description": "Le rite de Passage concerne le passage d’un louveteau à son premier Rang dans la société Garou, Les esprits sont invoqués pour venir réclamer le jeune Garou. L’image d’un esprit apparaîtra au Théurge, et cette vision donnera le nom de la tribu qui accueillera le jeune Cliath"
+  },
+  {
+    "name": "Rite de don de Gnose",
+    "level": 1,
+    "description": "Le rite convoque l’esprit du Sept pour qu’il vienne bénir les guerriers de Gaia en faisant un Don de Gnose, permettant de recharger la précieuse énergie spirituelle du loup."
+  },
+  {
+    "name": "Rite de Vision",
+    "level": 1,
+    "description": "Le rite plonge le ritualiste dans une transe où il peut obtenir une vision lointaine d’événements se déroulant dans une large zone, voire dans un passé avéré ou un futur possible. La vision ne sera pas claire, et il sera impossible de savoir précisément à quel moment ce qu’il voit est arrivé."
+  },
+  {
+    "name": "Rite de l'assemblée",
+    "level": 1,
+    "description": "Rituel traditionnel pour ouvrir les assemblées et rencontres festives, il régénère les lieux et permet parfois une apparition ou une bénédiction de l’Esprit Gardien du Sept"
+  },
+  {
+    "name": "Rite de la Mémoire",
+    "level": 2,
+    "description": "Le ritualiste parvient à remonter l’origine d’un Esprit, permettant d’obtenir le nom de son supérieur dans la hiérarchie spirituelle, dans le cadre d’un objet, ou le lieu auquel il fut rattaché et par qui."
+  },
+  {
+    "name": "Rite de la création élémentaire",
+    "level": 3,
+    "description": "Les Garous peuvent créer une quantité d’un élément défini, sur une zone donnée. L’élément correspondra aux 4 classiques (feu, terre, eau, air) et ne causera nulle douleur aux participants du rituel"
+  },
+  {
+    "name": "Rite de la purification",
+    "level": 3,
+    "description": "Ce rite permet de purifier une zone, ou un individu, d’une corruption surnaturelle."
+  },
+  {
+    "name": "Rite du mandala de la bataille",
+    "level": 4,
+    "description": "Le Rituel permet d’invoquer des Esprits de la guerre et d’obtenir ainsi des bénédictions de leur part, que ce soit pour défendre ou pour attaquer les lieux."
+  },
+  {
+    "name": "Rite du Caern",
+    "level": 5,
+    "description": "Ce rituel permet, normalement, d’ouvrir un Caern. Or, le rite s’est perdu, et seuls certains éléments morcelés vous seront fournis si vous prenez ce rituel. Certains seront vrais, beaucoup seront faux, et il pourrait être important de relier les différents avis des Tribus pour trouver le vrai rituel... Si bien sûr il existe toujours."
+  },
+  {
+    "name": "Rite d’Invocation",
+    "level": 1,
+    "description": "Ce rite permet d’invoquer, de force, un esprit. Le Rite d’Invocation est une action directe, il s’agit de forcer un esprit à apparaître. La force de l’esprit, sa volonté, rentre donc parfaitement en compte, et selon sa nature il peut même déclencher un conflit. Ce rite ne permet pas de se nourrir de l’Esprit, mais est nécessaire pour le soumettre."
+  },
+  {
+    "name": "Rite du Chacal",
+    "level": 1,
+    "description": "Ce rite, humiliant, force la cible à parler avec une voix suraiguë. S’il ne fait pas plus de mal, il peut être très mal vécu par les Loup-Garous qui mettent sur un piédestal leur orgueil personnel."
+  },
+  {
+    "name": "Rite de l’Enfant Sauvage",
+    "level": 1,
+    "description": "Ce rituel vide l’esprit d’un Garou, l’empêchant d’utiliser ses connaissances et lui vidant la mémoire au point qu’il oubliera tout des langues qu’il parle (y compris sa langue maternelle). Pendant la durée du châtiment, il ne pourra s’exprimer qu’en langage Garou et oubliera toute les choses se basant sur l’attribut Intelligence."
+  },
+  {
+    "name": "Rite du Loup Omega",
+    "level": 2,
+    "description": "Ce rite appose une marque sur le front du Loup-Garou qui change son Rang à 0 de manière temporaire. Ce n’est pas un louveteau, c’est un Omega, et ce rite est bien une punition, et il s’agit d’une humiliation à vivre pour le Garou. La marque est reconnue par tous, et le Loup subit moquerie et injure aussi longtemps que dure sa peine. Ce rituel est souvent demandé par l’Alpha d’un Sept, pour rabaisser l’orgueil un peu trop avancé d’un Garou.'"
+  },
+  {
+    "name": "Rite de Contrition",
+    "level": 2,
+    "description": "Ce rite est conduit pour obtenir le pardon pour une offense contre l’Alpha d’un Sept voire l’Esprit guide de celui-ci. Le ritualiste fait payer à l’offenseur une réparation mais surtout va bloquer pour une durée qui peut varier un sens ou un membre de la personne."
+  },
+  {
+    "name": "Rite de dévoration de Gnose",
+    "level": 2,
+    "description": "Ce rite permet d’appeler un esprit mineur, et pour le ritualiste de dévorer l’aura et l’âme de l’esprit en engageant un combat contre lui. Ce rite est une agression qui permet de temporairement dépasser son maximum de Gnose, mais uniquement pour le Ritualiste."
+  },
+  {
+    "name": "Rite de la Chasse",
+    "level": 3,
+    "description": "Ce rite place une marque spirituelle sur un condamné, lequel va être traqué après le rituel et normalement mis à mort. Cette marque possède une odeur bien spécifique, et elle laisse une chance au condamné de s’en sortir par ses propres moyens. À la différence du Ronin, cette action même si elle est finale offre au condamné une chance de mourir dans l’honneur."
+  },
+  {
+    "name": "Rite de la contrainte météorologique",
+    "level": 4,
+    "description": "Les Garous peuvent influer sur les puissances Kaotiques et changer la météo d’une zone géographique dépendant de la puissance effective du Rituel. Ce changement de météo peut aller du tout au tout, mais une différence importante nécessite plus de puissance (ce sera plus simple de passer d’un ciel bleu à un ciel nuageux, que de ce même ciel bleu à une tempête de catégorie 5)"
+  },
+  {
+    "name": "Rite du Ronin",
+    "level": 5,
+    "description": "Ce rite bannit le Garou de la Tribu, pour un crime qu’il a commis qui mériterait normalement la mort. Il peut arriver dans des cas très graves que le Crime soit autre, mais il y a toujours un rapport avec la Litanie de la Tribu ou l’Alliance. Le Garou est battu, les secrets de la Tribu lui sont arrachés de l’esprit, on lui grave la marque du Ronin sur le corps, puis il est rejeté par les Esprits de la Tribu. Il devra quitter le territoire pour ne jamais y revenir, et vivre désormais sans attache d’aucune sorte, ni aucun secours."
+  }
+]
