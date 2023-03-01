@@ -1,4 +1,4 @@
-import { Button, Typography } from '@mui/material';
+import { Alert, Button } from '@mui/material';
 import { PropTypes } from 'prop-types';
 import { useAppContext } from './CreateContext';
 import { useRouter } from 'next/router';
@@ -19,6 +19,9 @@ export default function SendButton({
   donsToPost,
   languageToPost,
   cryToPost,
+  ritualsToPost,
+  bonusToPost,
+  bonusRageToPost,
 }) {
   const router = useRouter();
   const [error, setError] = React.useState(false);
@@ -36,10 +39,12 @@ export default function SendButton({
     saveHandicaps,
     saveDons,
     saveLanguage,
+    saveRituals,
+    saveBonus,
   } = useAppContext();
   React.useEffect(() => {
-    setTimeout(() => setError(false), '3000');
-    setTimeout(() => setErrorSend(false), '3000');
+    setTimeout(() => setError(false), '5000');
+    setTimeout(() => setErrorSend(false), '5000');
   }, [refresh]);
 
   function postSheet(
@@ -55,7 +60,10 @@ export default function SendButton({
     avantages,
     dons,
     language,
-    cry
+    cry,
+    rituals,
+    bonusAuspice,
+    bonusRage
   ) {
     if (
       saveDesc === true &&
@@ -68,7 +76,9 @@ export default function SendButton({
       saveLanguage === true &&
       saveAvantages === true &&
       saveHandicaps === true &&
-      saveDons === true
+      saveDons === true &&
+      saveRituals === true &&
+      saveBonus === true
     ) {
       let data = JSON.stringify({
         code: code,
@@ -86,7 +96,7 @@ export default function SendButton({
           name: auspice.name,
           moon: auspice.moon,
           bonus: auspice.bonus,
-          rage: auspice.rage,
+          rage: auspice.rage + bonusRage,
         },
         attributes: attributes,
         avantages: avantages,
@@ -102,43 +112,7 @@ export default function SendButton({
             description: null,
           },
         ],
-        rituels: [
-          {
-            name: null,
-            level: 0,
-            description: null,
-          },
-          {
-            name: null,
-            level: 0,
-            description: null,
-          },
-          {
-            name: null,
-            level: 0,
-            description: null,
-          },
-          {
-            name: null,
-            level: 0,
-            description: null,
-          },
-          {
-            name: null,
-            level: 0,
-            description: null,
-          },
-          {
-            name: null,
-            level: 0,
-            description: null,
-          },
-          {
-            name: null,
-            level: 0,
-            description: null,
-          },
-        ],
+        rituals: rituals,
         cry: cry,
         talents: talents,
         skills: skills,
@@ -147,6 +121,7 @@ export default function SendButton({
         wod: wod,
         dons: dons,
         language: language,
+        bonusAuspice: bonusAuspice,
         influences: [],
       });
       let config = {
@@ -177,7 +152,7 @@ export default function SendButton({
   return (
     <div>
       <Button
-        sx={{ bgcolor: 'primary.main', color: 'background.paper' }}
+        sx={{ bgcolor: 'primary.main', color: 'background.paper', marginBottom: '.5rem' }}
         onClick={() =>
           postSheet(
             descriptionToPost,
@@ -192,13 +167,26 @@ export default function SendButton({
             avantagesToPost,
             donsToPost,
             languageToPost,
-            cryToPost
+            cryToPost,
+            ritualsToPost,
+            bonusToPost,
+            bonusRageToPost
           )
         }
       >
         Envoyez la fiche
       </Button>
-      <Typography>{errorSend ? 'Un soucis est survenu' : error ? 'Il manque des informations' : ' '}</Typography>
+      {errorSend ? (
+        <Alert variant="filled" severity="error">
+          Un soucis est survenu !{' '}
+        </Alert>
+      ) : error ? (
+        <Alert variant="filled" severity="warning">
+          Il manque des informations
+        </Alert>
+      ) : (
+        ' '
+      )}
     </div>
   );
 }
@@ -216,4 +204,7 @@ SendButton.propTypes = {
   donsToPost: PropTypes.array,
   languageToPost: PropTypes.array,
   cryToPost: PropTypes.array,
+  ritualsToPost: PropTypes.array,
+  bonusToPost: PropTypes.object,
+  bonusRageToPost: PropTypes.integer,
 };

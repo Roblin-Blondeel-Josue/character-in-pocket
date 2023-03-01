@@ -266,7 +266,7 @@ export default function DescriptionCreate() {
           >
             Sauvegardez
           </Button>
-          {saveDesc ? 'Informations Sauvesgardées' : ''}
+          {saveDesc ? 'Informations Sauvegardées' : ''}
         </AccordionDetails>
       </Accordion>
     </Card>
