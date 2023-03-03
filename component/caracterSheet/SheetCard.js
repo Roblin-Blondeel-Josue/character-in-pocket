@@ -30,6 +30,7 @@ export default function SheetCard() {
             auspice={player.auspice}
             auspicePower={player.auspicePower}
             dons={player.dons}
+            bonusAuspice={player.bonusAuspice}
           />
         </>
       ) : (
