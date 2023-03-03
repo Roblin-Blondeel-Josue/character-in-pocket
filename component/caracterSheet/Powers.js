@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import { AccordionDetails, AccordionSummary, Card, Typography } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Card, Typography } from '@mui/material';
 import AccordionModelDescription from './model/AccordionModelDescription';
 import LupusPower from '../../data/LupusPower';
 import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
@@ -29,8 +29,8 @@ export default function Powers({ rituels, cry, auspice, auspicePower, dons, bonu
         <div style={{ display: 'hidden' }} />
       )}
       <AccordionModelDescription array={dons} title="Dons" />
-      {bonusAuspice !== null && bonusAuspice.name !== null ? (
-        <>
+      {bonusAuspice.name != null ? (
+        <Accordion>
           <AccordionSummary
             sx={{ p: '.5rem 1rem 0 1rem' }}
             expandIcon={<ArrowDropDownCircleIcon />}
@@ -42,11 +42,9 @@ export default function Powers({ rituels, cry, auspice, auspicePower, dons, bonu
             </Typography>
           </AccordionSummary>
           <AccordionDetails sx={{ p: '0rem 1rem', paddingTop: 0 }}>
-            <Typography sx={{ m: 0 }} variant="h6">
-              {bonusAuspice.descrption}
-            </Typography>
+            <Typography sx={{ m: '0 0 1rem 0' }}>{bonusAuspice.description}</Typography>
           </AccordionDetails>
-        </>
+        </Accordion>
       ) : (
         <div style={{ display: 'hidden' }} />
       )}
