@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 import { Stack, Typography, Accordion, AccordionSummary, AccordionDetails, Skeleton } from '@mui/material';
 import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
 
-export default function AccordionModelLevel({ array, title }) {
+export default function AccordionModelLanguage({ array, title }) {
   return (
     <Accordion>
       <AccordionSummary
@@ -20,9 +20,9 @@ export default function AccordionModelLevel({ array, title }) {
         <Stack spacing={0.5} direction="row" sx={{ justifyContent: 'center', flexWrap: 'wrap' }}>
           {array ? (
             array.map((item, index) =>
-              item.level != 0 ? (
+              item.description != null ? (
                 <Typography key={index}>
-                  <b>{item.name}:</b> {item.level} |
+                  <b>{item.name}:</b> {item.description} |
                 </Typography>
               ) : (
                 <div key={index} style={{ display: 'hidden' }} />
@@ -36,7 +36,7 @@ export default function AccordionModelLevel({ array, title }) {
     </Accordion>
   );
 }
-AccordionModelLevel.propTypes = {
+AccordionModelLanguage.propTypes = {
   array: PropTypes.array,
   title: PropTypes.string,
   type: PropTypes.string,

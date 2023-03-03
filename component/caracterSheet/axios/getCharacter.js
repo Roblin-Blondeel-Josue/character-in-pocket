@@ -1,6 +1,8 @@
 import axios from 'axios';
+import React from 'react';
 
-export default async function getCharacter(code) {
+export default function GetCharacter(code) {
+  const [sheetData, setSheetData] = React.useState([]);
   let config = {
     method: 'get',
     maxBodyLength: Infinity,
@@ -10,8 +12,9 @@ export default async function getCharacter(code) {
     },
     data: '',
   };
-  const response = await axios(config);
-  console.log('Fiche reçu');
-  const list = response.data;
-  return list;
+  axios(config).then((response) => {
+    setSheetData(response.data);
+    console.log('Fiche reçu');
+  });
+  return sheetData;
 }

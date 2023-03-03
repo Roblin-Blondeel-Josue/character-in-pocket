@@ -69,7 +69,7 @@ export default function AttributesCreate() {
               sx={{
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                m: '0 2rem .5rem 2rem',
+                m: '0 .75rem .5rem .75rem',
                 borderBottom: '1px solid grey',
               }}
             >
@@ -131,7 +131,7 @@ export default function AttributesCreate() {
               sx={{
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                m: '0 2rem .5rem 2rem',
+                m: '0 .75rem .5rem .75rem',
                 borderBottom: '1px solid grey',
               }}
             >
@@ -193,7 +193,7 @@ export default function AttributesCreate() {
               sx={{
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                m: '0 2rem .5rem 2rem',
+                m: '0 .75rem .5rem .75rem',
                 borderBottom: '1px solid grey',
               }}
             >
