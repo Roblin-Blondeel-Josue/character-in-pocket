@@ -22,10 +22,14 @@ export default function Bonus() {
   const [auspiceMoon, setAuspiceMoon] = React.useState('');
 
   React.useEffect(() => {
-    setAuspice(getAuspice(auspiceMoon));
+    if (auspiceMoon != '') {
+      setAuspice(getAuspice(auspiceMoon));
+    }
   }, [auspiceMoon]);
   function sendBonus(auspice) {
-    setBonusAuspice({ name: `${auspice.name} (${auspice.moon})`, level: 0, description: auspice.bonus });
+    if (auspiceMoon != '') {
+      setBonusAuspice({ name: `${auspice.name} (${auspice.moon})`, level: 0, description: auspice.bonus });
+    }
     setSaveBonus(true);
   }
   return (

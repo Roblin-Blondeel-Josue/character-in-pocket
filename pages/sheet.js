@@ -3,11 +3,11 @@ import Head from 'next/head';
 import Header from '../component/Header';
 import { Button, FormControl, TextField } from '@mui/material';
 import { PropTypes } from 'prop-types';
-import getCharacters from '../component/caracterSheet/axios/getCharacter';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useReadContext } from '../component/caracterSheet/SheetContext';
 import SheetCard from '../component/caracterSheet/SheetCard';
+import axios from 'axios';
 
 export default function Sheet() {
   const theme = useTheme();
@@ -34,10 +34,18 @@ export default function Sheet() {
           setCode(code);
         } else {
           // La clé n'existe pas dans le local storage
-          getCharacters(code).then((response) => {
-            setPlayer(response.result);
-            setCode(code);
-            const playerData = JSON.stringify(response.result);
+          let config = {
+            method: 'get',
+            maxBodyLength: Infinity,
+            url: `https://garou-api.onrender.com/sheet/character/${code}`,
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          };
+          axios(config).then((response) => {
+            setPlayer(response.data.result);
+            console.log('Fiche reçu');
+            const playerData = JSON.stringify(response.data.result);
             if (typeof window !== 'undefined') {
               window.localStorage.setItem(`${code}`, playerData);
             }

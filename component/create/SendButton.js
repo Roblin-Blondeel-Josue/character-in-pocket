@@ -65,6 +65,7 @@ export default function SendButton({
     bonusAuspice,
     bonusRage
   ) {
+    const newRage = auspice.rage + bonusRage;
     if (
       saveDesc === true &&
       saveAttributes === true &&
@@ -96,7 +97,7 @@ export default function SendButton({
           name: auspice.name,
           moon: auspice.moon,
           bonus: auspice.bonus,
-          rage: auspice.rage + bonusRage,
+          rage: newRage,
         },
         attributes: attributes,
         avantages: avantages,

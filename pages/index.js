@@ -7,6 +7,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Header from '../component/Header';
 import Image from 'next/image';
 import Logo from '../public/Wolf_icon.png';
+import axios from 'axios';
 
 export default function Home() {
   const theme = useTheme();
@@ -19,6 +20,7 @@ export default function Home() {
     setTimeout(() => {
       setReady(false);
     }, '3500');
+    axios.get('https://garou-api.onrender.com/').then(() => console.log('Server is awaken'));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
