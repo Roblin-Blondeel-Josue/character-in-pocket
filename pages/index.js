@@ -1,20 +1,18 @@
 import Head from 'next/head';
 import React from 'react';
-import { useRouter } from 'next/router';
-import { Button, Card, CardContent, CardHeader, Grow, Slide, Typography } from '@mui/material';
+import { Card, CardContent, CardHeader, Grow, Slide, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Header from '../component/Header';
 import Image from 'next/image';
 import Logo from '../public/Wolf_icon.png';
 import axios from 'axios';
+import Layout from '../component/Layout';
 
 export default function Home() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('md'));
-  const router = useRouter();
   const [enter, setEnter] = React.useState(false);
-  const [ready, setReady] = React.useState(true);
+  const [ready, setReady] = React.useState(false);
   React.useEffect(() => {
     setEnter(true);
     setTimeout(() => {
@@ -50,17 +48,21 @@ export default function Home() {
           </div>
         ) : (
           <>
-            <Header />
-            <Card sx={{ p: 0, margin: '2vh 5vw', borderRadius: '5px' }}>
-              <CardHeader
-                sx={{ p: '.5rem' }}
-                title={<Typography align="center">Veuillez choisir ce que vous désirez faire</Typography>}
-              />
-              <CardContent style={{ padding: '0 0 .5rem 0', display: 'flex', justifyContent: 'center' }}>
-                <Button onClick={() => router.push('/create')}>Créer une fiche</Button>{' '}
-                <Button onClick={() => router.push('/sheet')}>Voir ma fiche</Button>
-              </CardContent>
-            </Card>
+            <Layout
+              composent={
+                <Card sx={{ bgcolor: 'background.default' }} style={{ width: '100%' }}>
+                  <CardHeader
+                    sx={{ p: '1rem' }}
+                    title={
+                      <Typography align="start" bold fontSize={40}>
+                        Bienvenue, membre !
+                      </Typography>
+                    }
+                  />
+                  <CardContent style={{ padding: '1rem' }}>bob</CardContent>
+                </Card>
+              }
+            />
           </>
         )}
 

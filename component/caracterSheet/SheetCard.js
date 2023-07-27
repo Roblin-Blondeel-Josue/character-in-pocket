@@ -11,7 +11,7 @@ import { Skeleton } from '@mui/material';
 export default function SheetCard() {
   const { player } = useReadContext();
   return (
-    <div style={{ margin: '5vh 5vw' }}>
+    <div style={{ padding: '2vh 2vw', backgroundColor: '#e6ddc4' }}>
       {player ? (
         <>
           <DescriptionCard player={player} />

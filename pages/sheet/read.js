@@ -1,13 +1,12 @@
 import React from 'react';
-import Head from 'next/head';
-import Header from '../component/Header';
-import { Button, FormControl, TextField } from '@mui/material';
+import { Button, Card, CardContent, CardHeader, FormControl, TextField, Typography } from '@mui/material';
 import { PropTypes } from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { useReadContext } from '../component/caracterSheet/SheetContext';
-import SheetCard from '../component/caracterSheet/SheetCard';
+import { useReadContext } from '../../component/caracterSheet/SheetContext';
+import SheetCard from '../../component/caracterSheet/SheetCard';
 import axios from 'axios';
+import Layout from '../../component/Layout';
 
 export default function Sheet() {
   const theme = useTheme();
@@ -55,38 +54,43 @@ export default function Sheet() {
     }
   }
   return (
-    <div>
-      <Head>
-        <title>Chara'pocket</title>
-        <meta name="description" content="Character sheet in your pocket" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main>
-        <Header />
-        {code > 0 ? (
+    <Layout
+      composent={
+        code > 0 ? (
           <SheetCard />
         ) : (
-          <FormControl
-            sx={matches ? { m: '1rem 5vw', display: 'flex' } : { m: '10vh 40vw', width: '20vw' }}
-            onSubmit={(event) => event.preventDefault()}
-          >
-            <TextField
-              sx={{ bgcolor: 'background.paper', color: 'primary', borderRadius: '5px', paddingRight: '1rem' }}
-              label="Indiquez votre code"
-              helperText={error ? 'Uniquement des chiffres' : ''}
-              onChange={(e) => handleCode(e.target.value)}
+          <Card sx={{ bgcolor: 'background.default' }} style={{ width: '100%' }}>
+            <CardHeader
+              sx={{ p: '1rem' }}
+              title={
+                <Typography align="start" bold fontSize={40}>
+                  Bienvenue, membre !
+                </Typography>
+              }
             />
-            <Button
-              sx={{ bgcolor: 'secondary.main', color: 'background.paper', marginTop: '.5rem' }}
-              onClick={() => receiveSheet(typingCode)}
-            >
-              Envoyez
-            </Button>
-          </FormControl>
-        )}
-        <div style={{ height: '10vh' }} />
-      </main>
-    </div>
+            <CardContent style={{ padding: '1rem' }}>
+              <FormControl
+                sx={matches ? { m: '1rem 5vw', display: 'flex' } : { m: '10vh 40vw', width: '20vw' }}
+                onSubmit={(event) => event.preventDefault()}
+              >
+                <TextField
+                  sx={{ bgcolor: 'background.paper', color: 'primary', borderRadius: '5px', paddingRight: '1rem' }}
+                  label="Indiquez votre code"
+                  helperText={error ? 'Uniquement des chiffres' : ''}
+                  onChange={(e) => handleCode(e.target.value)}
+                />
+                <Button
+                  sx={{ bgcolor: 'secondary.main', color: 'background.paper', marginTop: '.5rem' }}
+                  onClick={() => receiveSheet(typingCode)}
+                >
+                  Envoyez
+                </Button>
+              </FormControl>
+            </CardContent>
+          </Card>
+        )
+      }
+    />
   );
 }
 Sheet.propTypes = {
